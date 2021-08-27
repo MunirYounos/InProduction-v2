@@ -937,7 +937,25 @@
         "type": "color",
         "id": "color_primary",
         "label": "Buttons",
-        "default": "#5600E3"
+        "default": "#83d0bd"
+      },
+      {
+        "type": "color",
+        "id": "color_primary-dark",
+        "label": "Anodyne primary dark color",
+        "default": "#252525"
+      },
+      {
+        "type": "color",
+        "id": "color_light-gray",
+        "label": "Anodyne light gray color",
+        "default": "#868686"
+      },
+      {
+        "type": "color",
+        "id": "color_dark-gray",
+        "label": "Anodyne dark gray color",
+        "default": "#444444"
       },
       {
         "type": "color",
@@ -949,19 +967,25 @@
         "type": "color",
         "id": "color_secondary",
         "label": "Links and accents",
-        "default": "#2DFFB3"
+        "default": "#83d0bd"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "accent color",
+        "default": "#f48400"
       },
       {
         "type": "color",
         "id": "color_input",
         "label": "Form elements",
-        "default": "#F2ECFF"
+        "default": "#f7f7f7"
       },
       {
         "type": "color",
         "id": "color_sales_price",
         "label": "Sales price",
-        "default": "#FF0000"
+        "default": "#F48900"
       },
       {
         "type": "header",
@@ -1051,19 +1075,19 @@
         "type": "color",
         "id": "color_footer_bg",
         "label": "Background",
-        "default": "#260759"
+        "default": "#161c1c"
       },
       {
         "type": "color",
         "id": "color_footer_default",
         "label": "Accent background",
-        "default": "#360C7B"
+        "default": "#33938c"
       },
       {
         "type": "color",
         "id": "color_footer_border",
         "label": "Borders",
-        "default": "#3E0E8F"
+        "default": "#444444"
       },
       {
         "type": "color",
@@ -1075,31 +1099,31 @@
         "type": "color",
         "id": "color_footer_primary",
         "label": "Buttons",
-        "default": "#2DFFB3"
+        "default": "#83d0bd"
       },
       {
         "type": "color",
         "id": "color_footer_button_text",
         "label": "Buttons label",
-        "default": "#360C7B"
+        "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "color_footer_secondary",
         "label": "Links and accents",
-        "default": "#2DFFB3"
+        "default": "#aadad2"
       },
       {
         "type": "color",
         "id": "color_footer_input",
         "label": "Form elements",
-        "default": "#1E0840"
+        "default": "#444444"
       },
       {
         "type": "color",
         "id": "color_footer_sales_price",
         "label": "Sales price",
-        "default": "#FF0000"
+        "default": "#83d0bd"
       },
       {
         "type": "header",
@@ -1109,7 +1133,7 @@
         "type": "color",
         "id": "color_overlay",
         "label": "Background",
-        "default": "#260759"
+        "default": "#f7f7f7"
       },
       {
         "type": "color",

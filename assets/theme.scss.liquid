@@ -241,12 +241,19 @@ $borderStyle: solid;
 $borders: ($borderWidth) ($borderStyle) ($colorBorder);
 
 /*================ _All_variables ================*/
+
 // Colors
 $colorPrimary: {{ settings.color_primary }};
 $colorSecondary: {{ settings.color_secondary }};
 $colorButtonText: {{ settings.color_button_text }};
 $colorInput: {{ settings.color_input}};
 $colorSalesPrice: {{ settings.color_sales_price }};
+$colorPrimaryDark: {{ settings.color_primary-dark }};
+$colorLightGray: {{ settings.color_light-gray}};
+$colorDarkGray: {{ settings.color_dark-gray }};
+$colorAccent: {{ settings.color_accent }};
+$white: white;
+$black: black;
 
 // Button size
 $paddingButtonY: {{ settings.button_padding_y }}px;
@@ -1330,7 +1337,7 @@ $class-type: unquote(".");
 @mixin formControl {
   border: $borders;
   border-radius: $borderRadius;
-  padding: ($paddingButtonY) ($paddingButtonX);
+  padding: ($paddingButtonY) ($paddingButtonX + 12);
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   display: inline-block;
@@ -2874,7 +2881,7 @@ button {
 // Default
 .btn {
   @include buttonBase;
-  @include button($colorInput, $colorBodyText);
+  @include button($colorAccent, $white);
 }
 
 // Colors
@@ -5974,7 +5981,11 @@ cite {
     height: auto;
   }
 }
-
+.hero__btn {
+font-size: 1rem;
+font-weight: 100;
+text-transform: uppercase;
+}
 .slide-link {
   position: absolute;
   width: 100%;
@@ -8809,6 +8820,90 @@ body:not(.dbtfy-wish_list-destroy) {
 }
 /* end-dbtfy-collection-filters */
 
+
+
+
+
+.services{
+	.services-wrapper{
+		margin-top: -3rem;
+		background-color: $white;
+		display: block;
+		position: relative;
+		text-align: center;
+		border-bottom: none !important;
+    z-index: $zindexOverBody;
+    @include screenUp($postSmall){
+      margin-left: -$gutter;
+    }
+	}
+	.services-title{
+		font-size: clamp($baseFontSize-sm, 4vw, $baseFontSize-lg);
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		color:$colorDarkGray;
+
+	}
+	.services-slider {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		@include screenUp($postSmall){
+		grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	.services-item{
+		position: relative;
+		display: block;
+		border: 1px solid rgba($colorLightGray, 0.1);
+		text-decoration: none;
+		color: $colorLightGray;
+		background-color: $white;
+		transition: .3s ease-in transform;
+    min-width: 100%;
+		 .content {
+			padding: 2rem .5rem;
+			.content-imagebox {
+				.img{
+					@include screenUp($postSmall){
+            filter: grayscale(0);
+          }
+				}
+			}
+			.content-textbox {
+				padding: 1rem 0;
+				.title{
+					font-size: 0.75rem;
+					font-weight: 700;
+					margin-bottom: .5rem;
+					text-transform: uppercase;
+					color:$colorDarkGray;
+          word-break: keep-all;
+				}
+				.info{
+					display: none;
+					@include screenUp($postSmall){
+						display: block;
+						font-size: .85rem;
+						font-weight: 200;
+						padding: 0 .5rem 1.5rem 0.5rem;
+
+					}
+				}
+			}
+		}
+
+		&:hover{
+			box-shadow: 0 0 2px rgba($colorLightGray, 0.3);
+			transform: translateY(-8px);
+          	opacity:1;
+			.content-imagebox {
+				.img{
+					filter: grayscale(100%);
+				}
+			}
+		}
+	}
+}
 
 {%- if settings.custom_style != blank -%}
 /*================ _custom_styles ================*/
