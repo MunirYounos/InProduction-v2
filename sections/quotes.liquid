@@ -3,10 +3,16 @@
 {%- endcapture -%}
 
 <div id="section-{{ section.id }}" class="{% unless section.settings.show_on_desktop %} medium--hide large--hide{% endunless %} {% unless section.settings.show_on_mobile %} small--hide{% endunless %} {{ section.settings.section_style }}" data-section-id="{{ section.id }}" data-section-type="quotes-section">
-  <div class="box">
+  <div class="box quotes-box">
     <div class="wrapper">
 
     {%- if section.blocks.size > 0 -%}
+         {%- if section.settings.trustpilot_imagetitle != blank -%}
+           <div class="trustpilot__logo text-center"><img class="section-header__trustpilot"
+              src="{{section.settings.trustpilot_imagetitle | img_url: '300x100' }}"
+              alt="{{ section.settings.title}}" /></div> 
+            {%- endif -%}
+
       {%- unless section.settings.title == blank and section.settings.subtitle == blank -%}
       <div class="grid">
         <div class="grid__item large--eight-twelfths push--large--two-twelfths">
@@ -14,6 +20,7 @@
             {%- unless section.settings.title == blank -%}
             <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
             {%- endunless -%}
+            
             {%- unless section.settings.subtitle == blank -%}
             <p class="section-header__subtitle">{{ section.settings.subtitle | escape }}</p>
             {%- endunless -%}
@@ -44,7 +51,7 @@
 
         <!-- Blocks -->
         {%- for block in section.blocks -%}
-        <div class="grid__item flex {{ column_width }} quotes-{{ block.id }}" {{ block.shopify_attributes }}>
+        <a  href="{{ block.settings.quotes_link }}" target="_blank" rel="noopener noreferrer"   class="grid__item  now__islink flex {{ column_width }} quotes-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="card text-center">
             <div class="card-header">
               {%- if block.settings.quote_image -%}
@@ -62,13 +69,16 @@
               <div class="rte">{{ block.settings.quote }}</div>
               {%- endif -%}
             </div>
+            {%- if block.settings.stars_pic -%}
+                  <div class="stars"><img class="quote__stars" src="{{ block.settings.stars_pic | img_url: '128x32'}}" width="128" /></div>  
+            {%- endif -%}
             {%- if block.settings.author != blank -%}
             <div class="card-footer card-footer-xs">
               <cite>{{ block.settings.author | escape }}</cite>
             </div>
             {%- endif -%}
           </div>
-        </div>
+        </a>
         {%- endfor -%}
       </div>
       {%- else -%}
@@ -95,6 +105,11 @@
         "id": "show_on_mobile",
         "label": "Show on mobile",
         "default": true
+      },
+      {
+      "type": "image_picker",
+      "id": "trustpilot_imagetitle",
+      "label": "Image"
       },
 	    {
         "type": "text",
@@ -210,6 +225,17 @@
             "id": "quote",
             "label": "Text",
             "default":"<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+          },
+          {
+          "type": "image_picker",
+          "id": "stars_pic",
+          "label": "Add stars png not biger than 200x50"
+          },
+          {
+          "type": "text",
+          "id": "quotes_link",
+          "label": "Add an External link to quotes",
+          "default": "https://somelink.com"
           },
 		      {
             "type": "text",

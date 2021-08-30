@@ -3,7 +3,6 @@
     <div class="wrapper{{ section.settings.wrapper_size }}">
       {%- if section.blocks.size > 0 -%}
         <div class="grid grid-spacer">
-          
           <!-- Blocks -->
           {%- for block in section.blocks -%}
 
@@ -62,9 +61,17 @@
             {%- endcase -%}
 
             <div class="grid__item {{ block_width }} {{ block_width_mobile }}" {{ block.shopify_attributes }}>
-              {%- if block.settings.code != blank -%}
+
                 <div class="{{ block.settings.text_alignment }}">
-                  {{ block.settings.code }}
+                  {%- if block.settings.image != blank -%}
+                  <img src="{{ block.settings.image | img_url: '300x300'}}">
+                  {%- endif -%}
+                  <h2 class="section-mission__title">{{block.settings.mission_title}}</h2>
+                  <p class="section-mission__description">{{block.settings.mission_description}}</p>
+                  {%-if block.settings.btn_text !=blank -%}
+                  
+                  <a href="{{block.settings.btn_url}}"class="btn-mission">{{block.settings.btn_text}}</a>
+
                 </div>
               {%- else -%}
                 <div class="text-center">
@@ -86,9 +93,9 @@
 
 {% schema %}
   {
-    "name": "Custom HTML",
-	  "class": "custom-html-section",
-    "max_blocks": 9,
+    "name": "Mission",
+	  "class": "section__mission",
+    "max_blocks": 3,
 	  "settings": [
       {
         "type": "checkbox",
@@ -152,11 +159,22 @@
     "blocks": [
       {
         "type": "html",
-        "name": "Custom HTML",
+        "name": "Mission",
         "settings": [
+        {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "mission_title",
+            "label": "Heading",
+            "default": "Our Missin"
+          },
           {
             "type": "html",
-            "id": "code",
+            "id": "mission_description",
             "label": "HTML",
 			      "default": "<h2>Custom HTML!</h2><p>This section can be used to code your own custom layout.</p>"
           },
@@ -197,13 +215,23 @@
                 "label": "Right"
               }
             ]
+          },
+          {
+            "type": "text",
+            "id": "btn_text",
+            "label": "Button label"
+          },
+          {
+            "type": "url",
+            "id": "btn_url",
+            "label": "Button link"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "Custom HTML",
+        "name": "Mission",
         "category": "Advanced layout",
         "blocks": [
           {

@@ -237,8 +237,10 @@ $colorDefault: {{ settings.color_default }};
 // Border
 $borderWidth: {{ settings.border_width }}px;
 $colorBorder: {{ settings.color_border }};
+$colorBorderLight: lighten($colorBorder, 20%);
 $borderStyle: solid;
-$borders: ($borderWidth) ($borderStyle) ($colorBorder);
+$borders: ($borderWidth) ($borderStyle) ($colorBorderLight);
+$bordersLight: ($borderWidth) ($borderStyle) ($colorBorderLight);
 
 /*================ _All_variables ================*/
 
@@ -302,6 +304,7 @@ $shadowColor: color-control($colorBody);
 $shadowOpacity: 0.07;
 $shadow: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadow-sm: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
+$shadow-xs: 0px 0px 6px rgba($shadowColor, $shadowOpacity);
 $shadowTop: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowBottom: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowLeft: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
@@ -364,7 +367,7 @@ $animationDuration: $transitionDuration;
 $animationOffset: $spacer;
 
 // Scale
-$scale: 1.3;
+$scale: 1.0321;
 
 // Text link colors
 $colorLink: $colorSecondary;
@@ -1266,7 +1269,8 @@ $class-type: unquote(".");
 // Accent
 @mixin accentFontStack {
   font-family: $accentFontStack;
-  font-weight: $accentFontWeight;
+  font-weight: 100;
+  font-size: .79rem;
   font-style: $accentFontStyle;
   text-transform: $accentTextTransform;
   letter-spacing: $accentLetterSpacing;
@@ -1388,7 +1392,7 @@ $class-type: unquote(".");
       color: $color;
       background-color: darken($background, 7.5%);
       border-color: darken($background, 10%);
-      @include shadow(0 0 0 0.2rem adaptive-color($background, 20%));
+      @include shadow(0 0 0 0.1rem adaptive-color($background, 20%));
     }
 
     &:active {
@@ -2489,6 +2493,7 @@ p {
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: $spacer;
+  font-weight: 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2507,11 +2512,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size: $headerSize1}
-h2 {font-size: $headerSize2}
-h3 {font-size: $headerSize3}
-h4 {font-size: $headerSize4}
-h5 {font-size: $headerSize5}
-h6 {font-size: $headerSize6}
+h2 {font-size: $headerSize2; font-weight:100;}
+h3 {font-size: $headerSize3; font-weight:100;}
+h4 {font-size: $headerSize4; font-weight:100;}
+h5 {font-size: $headerSize5; font-weight:100;}
+h6 {font-size: $headerSize6; font-weight:100;}
 
 .h1 {@extend h1}
 .h2 {@extend h2}
@@ -3459,7 +3464,6 @@ button {
 }
 
 .card-header {
-  border-bottom: $borders;
   padding: $gutter-sm;
   border-radius: 0;
   width: 100%;
@@ -3517,7 +3521,7 @@ button {
 }
 
 .card-footer {
-  border-top: $borders;
+  border-top: $bordersLight;
   padding: $gutter-sm;
 
   & > :last-child {
@@ -4356,7 +4360,7 @@ cite {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($colorOverlay, $opacityOverlay);
+    background-color: rgba($colorDarkGray, 0.1);
   }
 
   h1, h2, h3, h4, h5, h6, p, .text-link {
@@ -4690,7 +4694,7 @@ cite {
 .grid__item {
   width: 100%;
   max-width: 100%;
-  padding-left: $gutter;
+  padding-left: $gutter-xs;
   -ms-flex-preferred-size: 0;
   flex-basis: 0;
   -ms-flex-positive: 1;
@@ -4782,6 +4786,32 @@ cite {
 }
 
 /*================ _Section_header ================*/
+.section__mission{
+  margin-top:-2rem;
+  .section-mission__title{
+    text-transform: uppercase;
+  }
+  .section-mission__description{
+    font-size: $baseFontSize-lg;
+    line-height:1.8;
+    margin-bottom: $gutter;
+  }
+  .btn-mission{
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 16px 54px;
+  background-color: $colorDarkGray;
+    &:hover, &:focus {
+        opacity: 1;
+        color: $white;
+        background-color: darken($colorDarkGray, 18.5%);
+        border-color: lighten($colorDarkGray, 40%);
+        @include shadow(0 0 0 0.1rem adaptive-color($colorDarkGray, 20%));
+      }
+  }
+}
+
 .section-header,
 .shopify-policy__title {
   margin-bottom: $gutter;
@@ -5134,11 +5164,12 @@ cite {
 
   .collection_grid-animation:hover & {
     @include transform(scale($scale));
+    opacity:.899;
   }
 }
 
 .collection_grid-inner {
-  padding: 0 $gutter-sm;
+  padding: 0;
 }
 
 .collection_grid-text-wrapper {
@@ -5146,6 +5177,12 @@ cite {
 }
 
 .collection_grid-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0;
+  background-color: $colorDarkGray;
+  color: $white;
+  padding: $gutter-sm;
   margin-bottom: 0;
 }
 
@@ -5168,7 +5205,36 @@ cite {
 .collection_grid--xlarge {
   min-height: $collectionHeightXlarge;
 }
-
+.custom__featuredCollection {
+  position: relative;
+  .btn__shopnow{
+    .shopnow{
+      background-color:$colorPrimary;
+      color:$white;
+      position: absolute;
+      bottom:26%;
+      left:$gutter-xs;
+      padding:$gutter-xs  ($gutter-xs + 8) $gutter-xs $gutter-xs;
+      font-size:0.75rem;
+      text-transform:uppercase;
+      z-index: 12;
+      @include screen($small){
+        left: $gutter-sm;
+        bottom:34%;
+      }
+    }
+  }
+  .collection_grid-product-count {
+    position: absolute;
+    top: 18px;
+    right: -27px;
+    z-index: 9;
+    transform: rotate(90deg);
+    padding: 4px 8px;
+    background-color:$colorPrimary;
+    color: $white;
+}
+}
 
 /*============================================================================
   _Sections
@@ -5353,6 +5419,12 @@ cite {
 // Nav inner-container
 .inner-nav-containers {
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include screenUp($postSmall){
+    justify-content: flex-end;
+  }
 }
 
 // Nav items
@@ -5402,7 +5474,7 @@ cite {
 // Icons
 .site-nav__link--icon {
   letter-spacing: 0 !important;
-  font-size: $iconFontSize-md;
+  font-size: ($iconFontSize-md - 4);
 }
 
 // Cart bubble
@@ -5985,6 +6057,7 @@ cite {
 font-size: 1rem;
 font-weight: 100;
 text-transform: uppercase;
+background-color: $colorAccent;
 }
 .slide-link {
   position: absolute;
@@ -8904,6 +8977,35 @@ body:not(.dbtfy-wish_list-destroy) {
 		}
 	}
 }
+
+.quotes-box {
+  margin-top: -$gutter !important;
+  @include screenUp($postSmall){
+    margin-top: - ($gutter-lg + $gutter) !important;
+  }
+  .section-header{
+    margin-bottom: 0;
+  }
+  .card {
+    border: none;
+    background-color: lighten($colorPrimary, 31%);
+    @include shadow($shadow-xs);
+    cite {
+      color: $colorPrimary;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 {%- if settings.custom_style != blank -%}
 /*================ _custom_styles ================*/
