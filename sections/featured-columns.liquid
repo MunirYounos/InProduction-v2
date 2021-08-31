@@ -4,7 +4,7 @@
 
       {%- unless section.settings.title == blank and section.settings.subtitle == blank -%}
         <div class="grid">
-          <div class="grid__item large--eight-twelfths push--large--two-twelfths">
+          <div class="grid__item large--eight-twelfths push--large--two-twelfths ">
             <div class="section-header">
               {%- unless section.settings.title == blank -%}
                 <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
@@ -26,11 +26,11 @@
 
           <!-- Blocks -->
           {%- for block in section.blocks -%}
-            <div class="grid__item {{ column_width }}" {{ block.shopify_attributes }}>
-
+            <div class="grid__item  {{ column_width }}  bg__white" {{ block.shopify_attributes }}>
+              <div class="bg__white-contentholder">
               {%- if block.settings.image != blank -%}
                 <div class="media-wrapper spacer-bottom" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%;">
-                  <img class="media lazyload"
+                  <img class="media lazyload bg__white-img"
                   {%- render 'lazysizes', img: block.settings.image, img_type: 'responsive' -%}
                   alt="{{ block.settings.image.alt }}">
                 </div>
@@ -39,7 +39,7 @@
               {%- else -%}
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg spacer-bottom' }}
               {%- endif -%}
-
+              <div class="bg__white-textholder">
               <h3 class="h4">{{ block.settings.title }}</h3>
               <div class="rte">{{ block.settings.text }}</div>
               {%- unless block.settings.button_label == blank -%}
@@ -47,6 +47,8 @@
                   {{ block.settings.button_label | escape }}
                 </a></p>
               {%- endunless -%}
+                </div>
+              </div>
             </div>
           {%- endfor -%}
         </div>

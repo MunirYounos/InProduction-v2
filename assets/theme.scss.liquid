@@ -237,9 +237,9 @@ $colorDefault: {{ settings.color_default }};
 // Border
 $borderWidth: {{ settings.border_width }}px;
 $colorBorder: {{ settings.color_border }};
-$colorBorderLight: lighten($colorBorder, 20%);
+$colorBorderLight: lighten($colorBorder, 3%);
 $borderStyle: solid;
-$borders: ($borderWidth) ($borderStyle) ($colorBorderLight);
+$borders: ($borderWidth) ($borderStyle) ($colorBorder);
 $bordersLight: ($borderWidth) ($borderStyle) ($colorBorderLight);
 
 /*================ _All_variables ================*/
@@ -311,7 +311,7 @@ $shadowLeft: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowRight: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 
 // Opacity
-$opacity: 0.6;
+$opacity: 0.8;
 
 // Overlay
 $colorOverlay: {{ settings.color_overlay }};
@@ -518,6 +518,16 @@ $maxHeight: -webkit-fill-available;
 }
 
 /*================ _Animations ================*/
+@keyframes pulseYoutube {
+	0% {
+		transform: scale(0.75);
+		opacity: 0.75;
+	}
+	100% {
+		transform:scale(1.5);
+		opacity: 0;
+	}
+}
 @mixin keyframes($name) {
   @-webkit-keyframes #{$name} {
     @content;
@@ -2501,7 +2511,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: $headerMarginBottom;
   text-rendering: optimizeLegibility;
-  color: $colorHeadings;
+  color: $colorDarkGray;
   @include headerFontStack;
 
   a {
@@ -3213,10 +3223,10 @@ button {
 /*================ _Badges ================*/
 .badge {
   @include textSub;
-  background-color: $colorHeadings;
   color: $colorBody;
   border-radius: $borderRadius;
-  padding: 4px 5px;
+  background-color: $colorAccent;
+  padding:4px 5px;
   white-space: nowrap;
   vertical-align: baseline;
   line-height: 1;
@@ -3225,6 +3235,26 @@ button {
 
   & > .tooltip-wrapper {
     position: initial;
+  }
+  .traingle_porcent{
+    position: absolute;
+    top:-4px;
+    left:-4px;
+    font-size: .89rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: $white;
+    z-index: 12;
+    &::after{
+      position: absolute;
+      content: '';
+      top:-4px;
+      left:-4px;
+      border-right: 32px solid transparent;
+      border-bottom: 40px solid transparent;
+      border-top: 40px solid  $colorAccent;
+      z-index: -1;
+    }
   }
 }
 
@@ -3402,6 +3432,7 @@ button {
 
 /*================ _Cards ================*/
 .card {
+  border: $bordersLight;
   background-color: $colorDefault;
   border-radius: $borderRadius;
   @include display-flexbox;
@@ -3735,6 +3766,60 @@ table {
     padding-bottom: 56.25%;
     height: 0;
     height: auto;
+
+    .youtube-cover-image{
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 100%;
+      z-index: 9;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .youtube-button {
+        width: 100px;
+        height: 100px;
+        background: $colorPrimary;
+        z-index: 22;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        border: 12px solid lighten($colorPrimary, 10%);
+        cursor: pointer;
+        @include shadow($shadow);
+        &::after{
+          content: '';
+          position: absolute;
+          top: -32px;
+          left: -32px;
+          width: 140px;
+          height: 140px;
+          background-color: rgba($colorPrimary, 0.4);
+          border-radius: 50%;
+          z-index: 1;
+          animation: pulseYoutube 2000ms ease-in infinite;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          width: 0; 
+          height: 0; 
+          top:50%;
+          left:55%;
+          transform: translate(-45%, -50%);
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-left: 30px solid $white;
+          z-index: 23;
+    
+        }
+      }
+    }
   }
 
   .section-default & {
@@ -4743,7 +4828,30 @@ cite {
     position: relative;
   }
 }
+.bg__white{
+  .bg__white-contentholder{
+    padding: $gutter-sm;
+    background-color: $white;
+    border: $bordersLight;
+    .media-wrapper{
+      padding-top: 100px !important;
 
+      .bg__white-img{
+        max-width: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .bg__white-textholder{
+      padding: $gutter-sm;
+      .rte p{
+        color: lighten($colorDarkGray, 20%);
+        font-size:.79rem;
+        line-height:1.6;
+      }
+    }
+  }
+}
 /*================ _Grid_breakpoint ================*/
 
 // Regular non-responsive width
@@ -5044,6 +5152,7 @@ cite {
 
 /*================ _Product_grid ================*/
 .grid-product__wrapper {
+  padding: $gutter-xs;
   .is-sold-out & {
     opacity: $opacity;
   }
@@ -6849,7 +6958,7 @@ body {
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
-.text-money {@include accentFontStack}
+.text-money {@include accentFontStack; font-size: 1.1rem;}
 .text-sub {@include textSub}
 .text-strike {text-decoration: line-through!important}
 .text-capitalize {text-transform: capitalize}
@@ -8996,7 +9105,136 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 
+.frontpage__accordions {
+  padding: 2rem 0;
+  .accordion__title-main{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom:$gutter;
+  }
+  .accordion{
+    list-style: none;
+    margin:0;
+    margin-left: -$gutter;
+    padding: 0;
+    background-color: darken($white, 2%);
+    .accordion__title{
+      padding: $gutter;
+      position: relative;
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: $colorDarkGray;
+      background-color: lighten(darken($colorPrimary, 30%), 60%);
+      transition: ease-in-out 0.2s all;
+      cursor: pointer;
+      &::after, &::before{
+        content: "";
+        position: absolute;
+        height: 2px;
+        border-radius: 50px;
+        transition: ease-in-out 0.6s all;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &::before{
+        width: 100%;
+        background-color: lighten($colorPrimary, 25%);
+      }
+      &::after{
+        background-image: linear-gradient(90deg, darken($colorPrimary, 10%), lighten($colorPrimary,25%));
+        width: 0%;
+      }
+      &:hover::after{
+        width: 100%;
+      }
+      &:hover .accIcon::before,
+      &:hover .accIcon::after{
+        background-color:darken($colorPrimary, 20%);
+      }
 
+    }
+    .accordion__flex{
+      padding: $gutter ;
+      display: flex;
+      align-items: center;
+      & > * {
+        flex: 1;
+      }
+      .fx.textholder,
+      .fx.accordion__image{
+        padding:0;
+      }
+      .fx.textholder {
+        margin-right:$gutter;
+        .accordion__innertitle{
+          margin-bottom: $gutter-sm;
+        }
+        .accordion__description{
+          font-size:.89rem;
+          line-height: 1.6;
+          color: lighten($colorDarkGray, 20%);
+        }
+        .btn.accordion__btn{
+          @include button($colorPrimary, $white);
+        }
+      }
+    }
+    .accIcon{
+      float: right;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      margin-top: -3px;
+      align-items: center;
+      justify-content: center;
+      &::before, &::after{
+        content: "";
+        position: absolute;
+        border-radius: 50px;
+        background-color: $colorDarkGray;
+        transition: ease 0.3s all;
+      }
+      &::before{
+        width: 2px;
+        height: 16px;
+      }
+      &::after{
+        width: 16px;
+        height: 2px;
+      }
+    }
+    .item {
+      .accordion__flex{
+        opacity: 0;
+        height: 0;
+        padding: 0px 20px;
+        position: relative;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 200;
+        transition: all 0.6s cubic-bezier(0.42, 0.2, 0.08, 1);
+        overflow: hidden;
+        letter-spacing: 0.5px;
+        &.accordion-show {
+          opacity: 1;
+          height: auto;
+          padding: 25px 20px;
+          position: relative;
+          z-index: 0;
+          padding: $gutter ;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
 
 
 
