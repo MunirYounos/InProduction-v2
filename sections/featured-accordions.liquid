@@ -7,9 +7,17 @@
 		<ul class="accordion">
 			{%- for block in section.blocks -%}
 			<li class="item">
-				{%- if block.settings.accordion_title != blank -%}
-					<h2 class="accordion__title"> {{ block.settings.accordion_title }}<span class="accIcon anime"></span></h2>
-					{%- endif -%}
+		
+						{% if forloop.index == 1 %}
+							{%- if block.settings.accordion_title != blank -%}
+							<h2 class="accordion__title accordionTitleActive"> {{ block.settings.accordion_title }}	<span class="accIcon anime"></span></h2>
+							{%- endif -%}
+						{% else %}
+							{%- if block.settings.accordion_title != blank -%}
+							<h2 class="accordion__title "> {{ block.settings.accordion_title }}	<span class="accIcon "></span></h2>
+							{%- endif -%}
+							{% endif %}
+				
 						{% if forloop.index == 1 %}
 						<div class="accordion__flex accordion-show">
 						{% else %}
