@@ -303,8 +303,8 @@ $borderRadius-sm: 3px;
 $shadowColor: color-control($colorBody);
 $shadowOpacity: 0.07;
 $shadow: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
-$shadow-sm: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
-$shadow-xs: 0px 0px 6px rgba($shadowColor, $shadowOpacity);
+$shadow-sm: 0px 0px 20px rgba($shadowColor, $shadowOpacity);
+$shadow-xs: 0px 0px 10px rgba($shadowColor, $shadowOpacity);
 $shadowTop: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowBottom: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowLeft: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
@@ -1417,7 +1417,7 @@ $class-type: unquote(".");
 
 // Button small
 @mixin buttonSmall {
-  padding: $paddingButtonSmallY $paddingButtonSmallX;
+  padding: ($paddingButtonSmallX ) ($paddingButtonSmallX * 1.8);
 }
 
 // Button xsmall
@@ -1462,7 +1462,7 @@ $class-type: unquote(".");
 
 // Button unselected
 @mixin buttonUnselected {
-  @include button($colorInput, $colorBodyText);
+  @include button(darken($colorInput, 5%), $colorBodyText);
 }
 
 // Button selected
@@ -1696,7 +1696,7 @@ $class-type: unquote(".");
 
   > * {
     display: inline-block;
-    margin-right: $spacer-sm;
+    margin-right: ($spacer-sm - 4 );
     margin-bottom: $spacer-sm;
     vertical-align: middle;
   }
@@ -2007,6 +2007,20 @@ $class-type: unquote(".");
       }
     }
 }
+
+.option__notavailable{
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 60px;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    background-color: $colorAccent;
+    transform: translateX(-50%) rotate(-38deg);
+  }
+}
 /*============================================================================
   _Vendor
 ==============================================================================*/
@@ -2126,7 +2140,7 @@ $class-type: unquote(".");
   font-size: $iconFontSize-md;
   opacity: 0;
   @include buttonBase;
-  @include button($colorBody, $colorBodyText);
+  @include button($colorDarkGray, $white);
   @include buttonSquareSmall;
   @include removeContent;
 
@@ -2948,6 +2962,7 @@ button {
 
 .btn-square-small {
   @include buttonSquareSmall;
+  @include button(darken($white, 10%), $colorLightGray);
 }
 
 .btn-square-xsmall {
@@ -2976,6 +2991,7 @@ button {
   border-radius: 0;
   display: block;
   width: 100%;
+  @include button($colorPrimary, $colorButtonText);
 
   @include screen($small) {
     padding-left: $gutter-sm;
@@ -3508,7 +3524,7 @@ button {
     }
 
     & + .card {
-      margin-top: $spacer;
+      margin-top: ($spacer - 11);
 
       @include screen($small) {
         border-top: $borders;
@@ -3625,8 +3641,11 @@ button {
 
 /*================ _Tabs ================*/
 .tab-header {
-  @include accentFontStack;
-
+ font-size: 1rem;
+ text-transform: uppercase;
+ background-color: lighten($colorSecondary, 29%);
+ padding-left: $gutter;
+  
   &::after {
     @include iconFontStack;
     content: "add";
@@ -3657,7 +3676,8 @@ button {
 }
 
 .tab-body {
-  border-left: 4px solid $colorSecondary;
+  background-color: lighten($colorSecondary, 35%);
+  padding: $gutter;
 }
 
 .tab-content {
@@ -3665,6 +3685,12 @@ button {
 
   & > :last-child {
     margin-bottom: 0;
+  }
+  .rte{
+    p{
+      font-size: .89rem;
+      line-height: 1.6;
+    }
   }
 }
 
@@ -3809,8 +3835,8 @@ table {
       background-size: cover;
       background-repeat: no-repeat;
       .youtube-button {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         background: $colorPrimary;
         z-index: 22;
         position: absolute;
@@ -3824,8 +3850,8 @@ table {
         &::after{
           content: '';
           position: absolute;
-          top: -32px;
-          left: -32px;
+          top: -42px;
+          left: -42px;
           width: 140px;
           height: 140px;
           background-color: rgba($colorPrimary, 0.4);
@@ -3841,9 +3867,9 @@ table {
           top:50%;
           left:55%;
           transform: translate(-45%, -50%);
-          border-top: 20px solid transparent;
-          border-bottom: 20px solid transparent;
-          border-left: 30px solid $white;
+          border-top: 16px solid transparent;
+          border-bottom: 16px solid transparent;
+          border-left: 24px solid $white;
           z-index: 23;
     
         }
@@ -4862,6 +4888,7 @@ cite {
     padding: $gutter-sm;
     background-color: $white;
     border: $bordersLight;
+    cursor: pointer;
     .media-wrapper{
       padding-top: 100px !important;
 
@@ -4873,10 +4900,24 @@ cite {
     }
     .bg__white-textholder{
       padding: $gutter-sm;
-      .rte p{
-        color: lighten($colorDarkGray, 20%);
-        font-size:.79rem;
-        line-height:1.6;
+      .rte{
+        p{
+          color: lighten($colorDarkGray, 20%);
+          font-size:.79rem;
+          line-height:1.6;
+        }
+      }
+      .btn--small{
+        @include button($colorDarkGray, $colorButtonText);
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      @include shadow($shadow-xs);
+      @include transition($transitions);
+      .btn--primary{
+        background-color: $colorDarkGray;
       }
     }
   }
@@ -4924,9 +4965,10 @@ cite {
 
 /*================ _Section_header ================*/
 .section__mission{
-  margin-top:-2rem;
+  margin-top: $gutter-sm;
   .section-mission__title{
     text-transform: uppercase;
+    margin-bottom: $gutter;
   }
   .section-mission__description{
     font-size: $baseFontSize-lg;
@@ -4954,28 +4996,22 @@ cite {
   margin-bottom: $gutter;
   text-align: $textAlignTitle;
   position: relative;
-
   & > *:last-child {
     margin-bottom: 0;
   }
-
   @include screen($small) {
     padding-bottom: $gutter;
-
     &::after {
       content: "";
-      border-bottom: $borders;
       display: block;
       left: -$gutter-sm;
       right: -$gutter-sm;
       padding-top: $gutter;
       position: absolute;
-
       .wrapper-full & {
         display: none;
       }
     }
-
     .wrapper-full & {
       padding-bottom: 0;
     }
@@ -5182,8 +5218,13 @@ cite {
 /*================ _Product_grid ================*/
 .grid-product__wrapper {
   padding: $gutter-xs;
+  @include transition($transitions);
   .is-sold-out & {
     opacity: $opacity;
+  }
+  &:hover{
+    transform: translateY(-8px);
+    @include shadow($shadow-xs);
   }
 }
 
@@ -5364,8 +5405,8 @@ cite {
   }
   .collection_grid-product-count {
     position: absolute;
-    top: 18px;
-    right: -27px;
+    top: 14px;
+    right: -22px;
     z-index: 9;
     transform: rotate(90deg);
     padding: 4px 8px;
@@ -5557,12 +5598,6 @@ cite {
 // Nav inner-container
 .inner-nav-containers {
   margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  @include screenUp($postSmall){
-    justify-content: flex-end;
-  }
 }
 
 // Nav items
@@ -6829,7 +6864,7 @@ background-color: $colorAccent;
   label {
     @include buttonBase;
     @include buttonSmall;
-    min-width: $heightInputSmall;
+    min-width: ($heightInputSmall - 3);
 
     &.disabled {
       .lt-ie9 & {
@@ -6894,6 +6929,48 @@ background-color: $colorAccent;
 .section-description {
   &.section-blank {
     padding-top: 0;
+  }
+}
+.product__top_description {
+  p {
+    font-size:0.85rem;
+    color: lighten($colorDarkGray, 15%);
+
+  }
+  .readmore-cover{
+    margin-bottom: $gutter-sm;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .btn-readmore {
+      display: inline-block;
+      // margin-left: $gutter-xs;
+      padding: $gutter-xs $gutter-sm ;
+      background-color: darken($colorInput, 3%);
+      color: $colorDarkGray;
+      font-size:0.75rem;
+      font-weight:300;
+      text-transform: uppercase;
+    }
+
+    // .videoPopupBtn {
+    //   width: auto;
+    //   padding: ($gutter-xs - 5px) ($gutter-sm - 4px);
+    //   background: $anodyne-secondary-clr;
+    //   color: $white;
+    //   text-decoration: none;
+    //   display: inline-flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size:0.75rem;
+    //   font-weight:300;
+    //   text-transform: uppercase;
+
+    //   span {
+    //     margin-right: 4px;
+    //     font-size: 1.2rem;
+    //   }
+    // }
   }
 }
 
@@ -9144,11 +9221,7 @@ body:not(.dbtfy-wish_list-destroy) {
 	}
 }
 
-.quotes-box {
-  margin-top: -$gutter !important;
-  @include screenUp($postSmall){
-    margin-top: - ($gutter-lg + $gutter) !important;
-  }
+.frontpage-quotes-box {
   .section-header{
     margin-bottom: 0;
   }
@@ -9159,6 +9232,8 @@ body:not(.dbtfy-wish_list-destroy) {
       color: $colorPrimary;
     }
     .stars{
+      display: flex;
+      justify-content: center;
       margin-bottom: $gutter;
     }
   }
@@ -9180,17 +9255,20 @@ body:not(.dbtfy-wish_list-destroy) {
       margin-left: -$gutter;
     }
     .accordion__title{
-      padding: ($gutter-sm + 6)  $gutter;
+      padding: ($gutter-sm + 6)  $gutter-sm ($gutter-sm + 6) $gutter-xs;
       position: relative;
       margin: 0;
-      font-size: 1.1rem;
+      font-size: .89rem;
       font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.2px;
       color: $colorDarkGray;
       background-color: lighten($colorLightGray, 42%);
       transition: ease-in-out 0.2s all;
       cursor: pointer;
+      @include screenUp($postSmall){
+        padding: ($gutter-sm + 6)  $gutter-sm ($gutter-sm + 6) $gutter;
+      }
       &::after, &::before{
         content: "";
         position: absolute;
@@ -9286,20 +9364,26 @@ body:not(.dbtfy-wish_list-destroy) {
       .accordion__flex{
         opacity: 0;
         height: 0;
-        padding: 0 $gutter-sm;
+        padding: 0 $gutter-xs;
         position: relative;
         font-size: .89rem;
         transition: all 0.6s cubic-bezier(0.42, 0.2, 0.08, 1);
         overflow: hidden;
         letter-spacing: 0.5px;
+        @include screenUp($postSmall){
+          padding: 0 $gutter;
+        }
         &.accordion-show {
           opacity: 1;
           height: auto;
           position: relative;
           z-index: 0;
-          padding: $gutter ;
+          padding: $gutter $gutter-xs;
           display: flex;
           align-items: center;
+          @include screenUp($postSmall){
+            padding: $gutter $gutter;
+          }
         }
       }
     /* Accordion Item line - Active */
@@ -9325,6 +9409,20 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 
+selector[data-type="languages"][data-id="283692853"] > .active, .ls-sw-languages-283692853 > .active {
+  padding:4px 5px !important;
+  border: 1px solid rgba(233,233,234,0.5) !important;
+  @include screen($small){
+    max-width: 60px;
+  }
+  }
+  selector[data-type="languages"][data-id="283692853"] > .active:after, .ls-sw-languages-283692853 > .active:after {
+  transform: rotate(-45deg) !important;
+  right: 15px !important;
+  }
+  selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:after, .ls-sw-languages-283692853.ls-sw-closed > .active:after{
+    transform: rotate(135deg)!important;
+  }
 
 
 

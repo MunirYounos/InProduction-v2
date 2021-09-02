@@ -459,7 +459,7 @@
                                 class="single-option-selector__radio js-single-option-selector"
                                 id="ProductSelect-option-{{ section.id }}-{{ option.name | handleize }}-{{ value | escape }}">
 
-                              <label for="ProductSelect-option-{{ section.id }}-{{ option.name | handleize }}-{{ value | escape }}"{% unless variant_label_state %} class="text-strike"{% endunless %}>{{ value | escape }}</label>
+                              <label for="ProductSelect-option-{{ section.id }}-{{ option.name | handleize }}-{{ value | escape }}"{% unless variant_label_state %} class="option__notavailable"{% endunless %}>{{ value | escape }}</label>
                             {%- endfor -%}
                           </fieldset>
                         {%- else -%}
@@ -660,7 +660,7 @@
 </div><!-- /.product-single -->
 
 {%- if show_info_section -%}
-<div class="section-description box {{ section.settings.description_style }} {{ section.settings.text_alignment }} {{ section.settings.text_alignment_mobile }}">
+<div id="read-more" class="section-description box {{ section.settings.description_style }} {{ section.settings.text_alignment }} {{ section.settings.text_alignment_mobile }}">
   <div class="wrapper">
     <div class="grid">
       <div class="grid__item{% unless section.settings.description_full %} large--eight-twelfths push--large--two-twelfths{% endunless %}">

@@ -1,6 +1,63 @@
 {
   "current": {
+    "sticky_header": false,
+    "sticky_announcement_bar": true,
+    "hero_header": false,
+    "height_header": 100,
+    "height_header_mobile": 70,
+    "icon": "material-icons-outlined",
+    "grid_product_truncate": false,
+    "collection_grid_card": false,
+    "collection_grid_products_count": true,
+    "collection_grid_animation": true,
+    "collection_grid_button_style": "",
+    "word_count": 33,
+    "show_currency_selector": false,
+    "section_height": "small",
+    "section_height_mobile": "small",
+    "border_radius": 1,
+    "button_padding_x": 30,
+    "button_padding_y": 15,
+    "top_button_position": "right",
+    "page_wrapper": "1248",
+    "payment_icon_size": 24,
+    "sale_type": "percentage",
+    "zindex_drawer": "999",
+    "color_announcement_bg": "#444444",
+    "color_default": "#f7f7f7",
+    "color_headings": "#252525",
+    "color_accent": "#f48400",
+    "color_drawer_bg": "#f7f7f7",
+    "color_drawer_default": "#eaeaea",
+    "color_drawer_border": "#e7e7e7",
+    "color_drawer_text": "#444444",
+    "color_drawer_primary": "#83d0bd",
+    "color_drawer_button_text": "#eaeaea",
+    "color_drawer_secondary": "#83d0bd",
+    "color_drawer_input": "#ffffff",
+    "color_drawer_error_text": "#f48400",
+    "color_drawer_sales_price": "#f48400",
+    "color_drawer_overlay_opacity": 50,
+    "color_footer_default": "#bbe4e1",
+    "color_overlay": "#252525",
+    "color_transparent_nav_text": "#f7f7f7",
+    "opacity_overlay": 16,
+    "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
+    "header_font_size": 32,
+    "header_font_size_big": 50,
+    "header_spacing": 0.1,
+    "accent_spacing": 0.1,
+    "button_uppercase": true,
+    "base_font_size": 12,
+    "dbtfy_collection_addtocart": false,
+    "dbtfy_color_swatches": true,
     "dbtfy_custom_currencies": false,
+    "dbtfy_inactive_tab_message": true,
+    "dbtfy_instagram_feed": false,
+    "dbtfy_product_tabs": true,
+    "dbtfy_quick_view": true,
+    "dbtfy_inactive_tab_message_text_first": "👕 up to 50% off",
+    "dbtfy_inactive_tab_message_text_second": "👕 Anodyne discounts",
     "sections": {
       "dbtfy-upsell-popup": {
         "type": "dbtfy-upsell-popup",
@@ -28,11 +85,11 @@
               "product_break_range_1": 2,
               "product_break_discount_code_1": "Test2",
               "product_break_discount_amount_1": "19",
-              "product_break_discount_type_1": "$",
+              "product_break_discount_type_1": "%",
               "product_break_range_2": 3,
               "product_break_discount_code_2": "Test3",
               "product_break_discount_amount_2": "38",
-              "product_break_discount_type_2": "$",
+              "product_break_discount_type_2": "%",
               "product_break_range_3": 2,
               "product_break_discount_code_3": "",
               "product_break_discount_amount_3": "",
@@ -74,7 +131,7 @@
       "dbtfy-bullet-points": {
         "type": "dbtfy-bullet-points",
         "settings": {
-          "dbtfy_bullet_points_position": "under-product-price"
+          "dbtfy_bullet_points_position": "under-addtocart-button"
         }
       },
       "dbtfy-sales-countdown": {
@@ -142,20 +199,22 @@
         "type": "header",
         "settings": {
           "main_menu_link_list": "main-menu",
-          "navigation_type": "center",
-          "header_font_size": 16,
+          "navigation_type": "right",
+          "header_font_size": 12,
           "logo_link": true,
+          "default_logo": "shopify:\/\/shop_images\/anodyneNewLogo.png",
+          "mobile_logo": "shopify:\/\/shop_images\/anodyneNewLogo.png",
           "default_logo_svg": "",
           "inverted_logo_svg": "",
           "mobile_logo_svg": "",
-          "logo_width": 200,
+          "logo_width": 140,
           "logo_mobile_width": 100
         }
       },
       "dbtfy-instagram-feed": {
         "type": "dbtfy-instagram-feed",
         "settings": {
-          "dbtfy_instagram_feed_icon": true,
+          "dbtfy_instagram_feed_icon": false,
           "dbtfy_instagram_feed_access_token": "",
           "dbtfy_instagram_feed_resolution": "low_resolution",
           "dbtfy_instagram_feed_full_width": false,
@@ -210,7 +269,7 @@
           "guarantee-2"
         ],
         "settings": {
-          "show_guarantee": true,
+          "show_guarantee": false,
           "guarantee_size": "xl",
           "section_style": "section-border"
         }
@@ -266,8 +325,79 @@
       },
       "product-template": {
         "type": "product-template",
+        "blocks": {
+          "3c1ba0f4-31bf-4023-8ec5-df5daa908bb7": {
+            "type": "description",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Details"
+            }
+          },
+          "72f69c35-ef4e-4428-a23a-b0994d0d2632": {
+            "type": "reviews",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "dbtfy_product_tabs_review": true,
+              "dbtfy_product_tabs_icons": "v",
+              "dbtfy_product_tabs_title": "Reviews"
+            }
+          },
+          "cace2e1c-86d2-4ecc-ba91-65c6898cbd62": {
+            "type": "text",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "text_alignment": "text-center",
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Rich text",
+              "dbtfy_product_tabs_text": "<p>asdfasdfa<\/p>",
+              "dbtfy_product_tabs_html": "asdfasdf",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": "mens-posture-shirt-zipper-zwart",
+              "dbtfy_product_tabs_collection": ""
+            }
+          },
+          "f3ce1113-dc04-4af9-8f90-c4d8b5b4cca7": {
+            "type": "text",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "text_alignment": "text-center",
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Rich text",
+              "dbtfy_product_tabs_text": "",
+              "dbtfy_product_tabs_html": "wefsdfasdfasdfa",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": "mens-posture-shirt-wit",
+              "dbtfy_product_tabs_collection": ""
+            }
+          },
+          "9b2470fb-ace6-451d-a928-3e222f90efc9": {
+            "type": "text",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "text_alignment": "text-center",
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "wwwww",
+              "dbtfy_product_tabs_text": "<p>wewewewewewew<\/p>",
+              "dbtfy_product_tabs_html": "wesewewewewewewwewwewewwewewewewewewew",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": "womens-posture-shirt-wit",
+              "dbtfy_product_tabs_collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "3c1ba0f4-31bf-4023-8ec5-df5daa908bb7",
+          "72f69c35-ef4e-4428-a23a-b0994d0d2632",
+          "cace2e1c-86d2-4ecc-ba91-65c6898cbd62",
+          "f3ce1113-dc04-4af9-8f90-c4d8b5b4cca7",
+          "9b2470fb-ace6-451d-a928-3e222f90efc9"
+        ],
         "settings": {
-          "dbtfy_product_tabs_position": "under_addtocart",
+          "dbtfy_product_tabs_position": "separate_section",
           "show_product_vendor": false,
           "show_product_type": true,
           "show_product_sku": false,
@@ -280,7 +410,7 @@
           "media_layout": "thumbnails",
           "image_size": "medium",
           "quantity_enabled": true,
-          "product_selector": "select",
+          "product_selector": "radio",
           "show_product_description": true,
           "enable_split_description": false,
           "description_full": false,
@@ -398,8 +528,450 @@
           "autoplay": true,
           "autoplayspeed": 5
         }
+      },
+      "16300631015589eb65": {
+        "type": "video-background",
+        "settings": {
+          "page_width": "full_width",
+          "height": "medium",
+          "newvideo_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0568\/4297\/7439\/files\/anodyne_cover_video.mp4?v=1627576656",
+          "show_overlay": false,
+          "image_position": "center center",
+          "video_title": "Posture clothing updated",
+          "text_size": "medium",
+          "text_description": "<p>Save 25 - 50% on all products with us<\/p>",
+          "text_description_size": "medium",
+          "button_label": "see more",
+          "button_link": "shopify:\/\/collections\/all",
+          "show_scrolldown": false
+        }
+      },
+      "1630063768bdfa2f5f": {
+        "type": "featured-services",
+        "blocks": {
+          "1630063768bdfa2f5f-0": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/Delivery_Truck.png",
+              "uspLinkUrl": ""
+            }
+          },
+          "1630063768bdfa2f5f-1": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/Delivery_Truck.png",
+              "uspLinkUrl": ""
+            }
+          },
+          "66c69b66-4ba2-424e-a46c-68c81d83d5c4": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/Delivery_Truck.png",
+              "uspLinkUrl": ""
+            }
+          },
+          "3011a919-3be7-41c5-aa09-25734c19504d": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/Delivery_Truck.png",
+              "uspLinkUrl": ""
+            }
+          }
+        },
+        "block_order": [
+          "1630063768bdfa2f5f-0",
+          "1630063768bdfa2f5f-1",
+          "66c69b66-4ba2-424e-a46c-68c81d83d5c4",
+          "3011a919-3be7-41c5-aa09-25734c19504d"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "1630070175c6ebb320": {
+        "type": "featured-collections",
+        "blocks": {
+          "1630070175c6ebb320-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "andere-producten",
+              "btn__shopnow": "Shop now"
+            }
+          },
+          "1630070175c6ebb320-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "rugsteun",
+              "btn__shopnow": "shop now"
+            }
+          },
+          "1630070175c6ebb320-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "posture-shirt",
+              "btn__shopnow": "shop now"
+            }
+          }
+        },
+        "block_order": [
+          "1630070175c6ebb320-0",
+          "1630070175c6ebb320-1",
+          "1630070175c6ebb320-2"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "full_width": false,
+          "title": "",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "section_height": "small",
+          "show_view_all": false,
+          "button_label": "View all",
+          "button_link": "shopify:\/\/collections",
+          "button_style": "btn--primary",
+          "slider_featured_collections": false,
+          "arrows": false,
+          "dots": false
+        }
+      },
+      "163032369225153039": {
+        "type": "mission",
+        "blocks": {
+          "b1098b0a-da6e-4795-8ddc-230d0010ed64": {
+            "type": "html",
+            "settings": {
+              "mission_title": "Wij zijn gespecialiseerd in houdingcorrectie en verlichting van pijn",
+              "mission_description": "Al 7 jaar streven wij ernaar toegang te verschaffen tot gemakkelijke en effectieve producten voor houdingscorrectie en pijnverlichting. Onze belangrijkste filosofie is dat we geen producten verkopen die we zelf niet zouden gebruiken. Sinds 2014 hebben we meer dan 300.000 tevreden klanten in Europa en we zijn van plan om er in de toekomst nog veel meer te hebben.",
+              "column_width": 12,
+              "column_width_mobile": 12,
+              "text_alignment": "text-center",
+              "btn_text": "mission",
+              "btn_url": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "b1098b0a-da6e-4795-8ddc-230d0010ed64"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "padding_section": true,
+          "section_style": "section-blank",
+          "wrapper_size": ""
+        }
+      },
+      "163032806406e9f003": {
+        "type": "quotes",
+        "blocks": {
+          "163032806406e9f003-0": {
+            "type": "quote",
+            "settings": {
+              "quote_image": "shopify:\/\/shop_images\/quotes.png",
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "stars_pic": "shopify:\/\/shop_images\/images.png",
+              "quotes_link": "https:\/\/somelink.com",
+              "author": "Author's name"
+            }
+          },
+          "163032806406e9f003-1": {
+            "type": "quote",
+            "settings": {
+              "quote_image": "shopify:\/\/shop_images\/quotes.png",
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "stars_pic": "shopify:\/\/shop_images\/images.png",
+              "quotes_link": "https:\/\/somelink.com",
+              "author": "Author's name"
+            }
+          },
+          "163032806406e9f003-2": {
+            "type": "quote",
+            "settings": {
+              "quote_image": "shopify:\/\/shop_images\/quotes.png",
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "stars_pic": "shopify:\/\/shop_images\/images.png",
+              "quotes_link": "https:\/\/somelink.com",
+              "author": "Author's name"
+            }
+          }
+        },
+        "block_order": [
+          "163032806406e9f003-0",
+          "163032806406e9f003-1",
+          "163032806406e9f003-2"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "trustpilot_imagetitle": "shopify:\/\/shop_images\/Trustpilot_logo.png",
+          "title": "",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "quote_width": "60",
+          "arrows": true,
+          "dots": true,
+          "autoplay": true,
+          "autoplayspeed": 7
+        }
+      },
+      "1630331223d20499c6": {
+        "type": "featured-products",
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "title": "MEEST VERKOCHTE PRODUCTEN",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "home_featured_products": "posture-shirt",
+          "rows": "1",
+          "desktop_grid": "4",
+          "mobile_grid": "2",
+          "show_view_all": true,
+          "button_label": "View all",
+          "button_link": "shopify:\/\/collections",
+          "button_style": "",
+          "slider_related_products": false,
+          "arrows": false,
+          "dots": false,
+          "autoplay": false,
+          "autoplayspeed": 5
+        }
+      },
+      "163039383589cd0ef5": {
+        "type": "featured-columns",
+        "blocks": {
+          "163039383589cd0ef5-0": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Happy.png",
+              "icon": "",
+              "title": "De originele houdingcorrigerende kleding",
+              "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"https:\/\/www.anodyne.nl\/\" title=\"https:\/\/www.anodyne.nl\/\">www.anodyne.nl<\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "163039383589cd0ef5-1": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Happy.png",
+              "icon": "",
+              "title": "Houdingcorrigerende kleding met 100% tevredenheidsgarantie",
+              "text": "<p>Bij Anodyne® bieden we altijd gratis verzending bij aankoop van meer dan 59 €, 100% tevredenheidsgarantie, 30 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 30 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 300.000 klanten, die de afgelopen 7 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "163039383589cd0ef5-2": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Happy.png",
+              "icon": "",
+              "title": "Van kinesiotape tot houdingcorrigerende kleding",
+              "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "fghdfgh",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "163039383589cd0ef5-0",
+          "163039383589cd0ef5-1",
+          "163039383589cd0ef5-2"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "title": "",
+          "subtitle": "",
+          "section_style": "section-default",
+          "text_align": ""
+        }
+      },
+      "1630404145a76c9e4d": {
+        "type": "featured-video",
+        "blocks": {
+          "1630404145a76c9e4d-0": {
+            "type": "video",
+            "settings": {
+              "video_cover_image": "shopify:\/\/shop_images\/shopidsk.jpg",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=kTm6zhgq9Mc",
+              "animated_button": true
+            }
+          }
+        },
+        "block_order": [
+          "1630404145a76c9e4d-0"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "full_width": false,
+          "title": "THE POSTURE SHIRT™",
+          "subtitle": "",
+          "section_style": "section-default"
+        }
+      },
+      "1630409395746d29de": {
+        "type": "featured-accordions",
+        "blocks": {
+          "1630409395746d29de-0": {
+            "type": "Accordion",
+            "settings": {
+              "accordion_title": "posture clothing",
+              "accordion__inner-title": "Working on Desk could be a problem",
+              "accordion__description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis. Lorem ipsum dolor sit amet.",
+              "accordion__image": "shopify:\/\/shop_images\/shopidsk.jpg",
+              "accordion__buttontext": "read more",
+              "accordion__LinkUrl": "shopify:\/\/collections"
+            }
+          },
+          "1630409395746d29de-1": {
+            "type": "Accordion",
+            "settings": {
+              "accordion_title": "Working on Desk every day",
+              "accordion__inner-title": "Working on Desk could be a problem",
+              "accordion__description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "accordion__buttontext": "Button text",
+              "accordion__LinkUrl": ""
+            }
+          },
+          "f87df513-1488-4240-a91d-ed8f2bb41077": {
+            "type": "Accordion",
+            "settings": {
+              "accordion_title": "Working on Desk could be a problem",
+              "accordion__inner-title": "Inner title if any",
+              "accordion__description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.\nLorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "accordion__buttontext": "Button text",
+              "accordion__LinkUrl": ""
+            }
+          },
+          "225005a5-c60f-4ff1-be6b-7f7256b16ac7": {
+            "type": "Accordion",
+            "settings": {
+              "accordion_title": "Standing all day",
+              "accordion__inner-title": "Working on Desk could be a problem",
+              "accordion__description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "accordion__buttontext": "Button text",
+              "accordion__LinkUrl": ""
+            }
+          }
+        },
+        "block_order": [
+          "1630409395746d29de-0",
+          "1630409395746d29de-1",
+          "f87df513-1488-4240-a91d-ed8f2bb41077",
+          "225005a5-c60f-4ff1-be6b-7f7256b16ac7"
+        ],
+        "settings": {
+          "title": "pain Reducing Recommendations",
+          "section_style": "section-blank"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "collection_tags_enable": true,
+          "collection_tags_count": true,
+          "collection_multiple_tags_filtering_enable": true,
+          "collection_sort_enable": true,
+          "tag_selector": "button",
+          "rows": "4",
+          "desktop_grid": "4",
+          "mobile_grid": "2"
+        }
+      },
+      "dbtfy-collection-filters": {
+        "type": "dbtfy-collection-filters",
+        "settings": {
+          "clear_label": "Clear",
+          "clear_all_label": "Clear All",
+          "hide_unavailable_options": false,
+          "show_tags_count": true,
+          "visibility_tags_count": "all"
+        }
+      },
+      "product-accordion-template": {
+        "type": "product-accordion-template",
+        "blocks": {
+          "91482a98-ed0f-4a52-bbc1-939c8b71b309": {
+            "type": "description",
+            "settings": {
+              "dbtfy_product_tabs_open": true,
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Details ASDFASDFA"
+            }
+          },
+          "edf4def2-c272-4a59-9185-76fb789985ab": {
+            "type": "text",
+            "settings": {
+              "dbtfy_product_tabs_open": false,
+              "text_alignment": "",
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Rich text",
+              "dbtfy_product_tabs_text": "<p>Het Posture Shirt™ voor vrouwen is gemaakt van slijtvaste en ademende materialen die nauw aansluiten op de huid – zonder dat dit invloed heeft op je bewegingsvrijheid. Je wordt niet in je bezigheden belemmerd. De unieke materialenmix zorgt voor veel rekbaarheid en daardoor een goede pasvorm en veel comfort. Het Posture Shirt™ 2.0 heeft PowerMesh panelen, waardoor het ademend is. Het shirt heeft ook een antimicrobiële behandeling ondergaan, waardoor het transpiratievocht kan afvoeren. Materiaal: Spa<\/p>",
+              "dbtfy_product_tabs_html": "Het Posture Shirt™ voor vrouwen is gemaakt van slijtvaste en ademende materialen die nauw aansluiten op de huid – zonder dat dit invloed heeft op je bewegingsvrijheid. Je wordt niet in je bezigheden belemmerd. De unieke materialenmix zorgt voor veel rekbaarheid en daardoor een goede pasvorm en veel comfort. Het Posture Shirt™ 2.0 heeft PowerMesh panelen, waardoor het ademend is. Het shirt heeft ook een antimicrobiële behandeling ondergaan, waardoor het transpiratievocht kan afvoeren. Materiaal: Spa",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": "womens-posture-shirt-wit",
+              "dbtfy_product_tabs_collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "91482a98-ed0f-4a52-bbc1-939c8b71b309",
+          "edf4def2-c272-4a59-9185-76fb789985ab"
+        ],
+        "settings": {
+          "dbtfy_product_tabs_position": "separate_section",
+          "show_product_vendor": false,
+          "show_product_type": true,
+          "show_product_sku": false,
+          "product_title_large": false,
+          "show_product_tags": true,
+          "show_sharing_icons": true,
+          "show_product_collections": true,
+          "enable_image_zoom": true,
+          "enable_video_looping": true,
+          "media_layout": "thumbnails",
+          "image_size": "medium",
+          "quantity_enabled": true,
+          "product_selector": "radio",
+          "show_product_description": false,
+          "enable_split_description": false,
+          "description_full": false,
+          "dbtfy_product_description_position": "separate_section",
+          "description_style": "section-border",
+          "text_alignment": "text-center",
+          "text_alignment_mobile": "small--text-center"
+        }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+      "16300631015589eb65",
+      "1630063768bdfa2f5f",
+      "1630070175c6ebb320",
+      "163032369225153039",
+      "163032806406e9f003",
+      "1630331223d20499c6",
+      "163039383589cd0ef5",
+      "1630404145a76c9e4d",
+      "1630409395746d29de"
+    ]
   }
 }
