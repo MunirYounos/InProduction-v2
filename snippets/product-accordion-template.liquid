@@ -571,6 +571,16 @@
               {%- endif -%}
             </div>
 
+                <!-- Nl basic counter start -->
+                <div class="nlify-counter">
+                  {%- if shop.locale == 'fr' -%}
+                <div id="nlify___fr-counter"></div>
+                  {%- else -%}
+                <div id="nlify___js-counter"></div>
+                  {%- endif -%} 
+              </div>
+              <!-- Nl basic counter end -->
+              
             {%- render "dbtfy-trust-badge", position: "product_page" -%}
 
             {%- if live_view_under_button -%}

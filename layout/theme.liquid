@@ -332,7 +332,7 @@
       {%- render "dbtfy-recently-viewed" -%}
 
       {%- section "dbtfy-instagram-feed" -%}
-      
+
       {% if template != 'index' %}
       {%- section "guarantee" -%}
       {%- endif -%}
@@ -352,6 +352,9 @@
           timber.resetPasswordSuccess();
         });
       </script>
+    {%- endif -%}
+    {%- if request.page_type == "product" -%}
+    <script src="{{ 'belify-counter.js' | asset_url }}" ></script>
     {%- endif -%}
   </body>
 </html>

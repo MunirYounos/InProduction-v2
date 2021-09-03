@@ -3056,7 +3056,7 @@ button {
 {%- if settings.show_top_button -%}
 // Scroll to top button
 .btn-top {
-  @include button($colorBody, $colorBodyText);
+  @include button($colorPrimary, $white);
   position: fixed;
   z-index: ($zindexOverBody - 1);
   bottom: $gutter;
@@ -4828,6 +4828,19 @@ cite {
       margin-bottom: -$gutter-xs;
     }
   }
+  .zipper__product{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background-image: url('zipper.svg');
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    z-index: 12;
+    @include screen($small){
+      max-width: 20%;
+    }
+  }
 }
 
 // Grid item
@@ -6162,14 +6175,21 @@ cite {
 }
 
 .site-footer__linktitle {
-  color: $colorFooterText;
+  color: $colorPrimary !important;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 
 .site-footer__linklist {
   a {
-    color: $colorFooterText;
+    color: darken($colorFooterText, 5%);
     display: inline-block;
     margin-bottom: $spacer-sm;
+    @include transition($transitions);
+    &:hover{
+      color: $white;
+    }
   }
 
   & > li:last-child a {
@@ -6194,14 +6214,14 @@ cite {
 .bottom-footer {
   padding: $gutter 0;
   border-top: $borders;
-  border-color: $colorFooterBorder;
+  border-color: $colorDarkGray;
 
-  .bottom-footer__copyright {
-    @include screenUp($postSmall) {
-      @include display-flexbox();
-      @include align-items(center);
-    }
-  }
+  // .bottom-footer__copyright {
+  //   @include screenUp($postSmall) {
+  //     @include display-flexbox();
+  //     @include align-items(center);
+  //   }
+  // }
 }
 
 .credentials {
@@ -7087,7 +7107,7 @@ body {
 .text-primary {color: $colorPrimary}
 .text-secondary {color: $colorSecondary}
 .text-sale {color: $colorSalesPrice}
-.text-small {font-size: $baseFontSize-sm}
+.text-small {font-size: ($baseFontSize-sm + 1)}
 .text-large {font-size: $baseFontSize-lg}
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
@@ -9053,6 +9073,34 @@ body:not(.dbtfy-wish_list-destroy) {
     .wl-active {
       @include button($colorFooterPrimary, $colorFooterButtonText);
     }
+    .main-footer{
+      .site-footer__socials{
+        a {
+          display: block;
+          width:100%;
+          padding:.5rem;
+          color: darken($colorButtonText, 10%);
+          font-size:0.85rem;
+          @include transition($transitions);
+          &:hover{
+            color:$white;
+          }
+  
+          .icon-svg{
+            margin-right:.5rem;
+            width:2rem;
+          }
+        }
+      }
+    }
+    .bottom-footer{
+      .footer-bottom{
+        padding:$gutter-xs 0;
+        .footer__item{
+          padding: $gutter-sm 0;
+        }
+      }
+    }
   }
 
   .wl-item {
@@ -9108,6 +9156,7 @@ body:not(.dbtfy-wish_list-destroy) {
 
 /* start-dbtfy-collection-filters */
 .collection-filters-btn {
+  @include button($colorPrimary, $white);
   @include screen($small) {
     margin-bottom: $spacer
   }
@@ -9409,6 +9458,59 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 
+.nlify_custom_text {
+  margin: $gutter-xs ($gutter * 1) $gutter-xs $gutter;
+  padding: $gutter-sm $gutter-xs 1px $gutter-xs;
+  background-color: lighten($colorAccent, 45%);
+  .small {
+    color: $colorAccent;
+    font-size: 0.85rem;
+    .custom_icon{
+      color: $colorLightGray;
+      font-size: 1rem;
+      padding-right:5px;
+    }
+  }
+}
+
+.nlify-counter{
+  margin: $gutter-sm 0;
+  padding: $gutter-sm;
+  border: 1px solid darken($white, 6%);
+  background-color: darken($white, 3%);
+  .timer__wrapper{
+    .timer__text{
+      font-size:1rem;
+    }
+    .timer__counter {
+      .time-hour,.time-min, .time-sec{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        strong{
+          font-size: ($headerSize2 - 4);
+          color:$colorDarkGray;
+          font-weight:100;
+          letter-spacing:3px;
+          line-height:1.2;
+        }
+        .time__badge{
+          color: $colorPrimary;
+          font-size:.55rem;
+          text-transform:uppercase;
+          font-weight:100;
+        }
+      }
+      code {
+        font-size:$headerSize2;
+        line-height:.5;
+        color:$colorDarkGray;
+      }
+    }
+  }
+}
+
 selector[data-type="languages"][data-id="283692853"] > .active, .ls-sw-languages-283692853 > .active {
   padding:4px 5px !important;
   border: 1px solid rgba(233,233,234,0.5) !important;
@@ -9423,13 +9525,6 @@ selector[data-type="languages"][data-id="283692853"] > .active, .ls-sw-languages
   selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:after, .ls-sw-languages-283692853.ls-sw-closed > .active:after{
     transform: rotate(135deg)!important;
   }
-
-
-
-
-
-
-
 
 
 {%- if settings.custom_style != blank -%}

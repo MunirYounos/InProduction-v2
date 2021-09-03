@@ -34,9 +34,9 @@
 
           {%- case block.settings.column_width -%}
             {%- when 1 -%}
-              {%- assign footer_column_class = 'large--one-fifth medium--one-fifth' -%}
+              {%- assign footer_column_class = 'large--three-twelfths medium--six-twelfths small--one-twelfths' -%}
             {%- when 2 -%}
-              {%- assign footer_column_class = 'large--two-fifths medium--two-fifths' -%}
+              {%- assign footer_column_class = 'large--three-fifths medium--three-fifths' -%}
             {%- when 3 -%}
               {%- assign footer_column_class = 'large--three-fifths medium--three-fifths' -%}
             {%- when 4 -%}
@@ -45,7 +45,7 @@
 
         <div class="grid__item {{ footer_column_class }} footer-item footer-{{ block.type }}" {{ block.shopify_attributes }}>
           {%- unless block.settings.title == blank -%}
-          <h6 class="site-footer__linktitle h4">{{ block.settings.title | escape }}</h6>
+          <h6 class="site-footer__linktitle h3">{{ block.settings.title | escape }}</h6>
           {%- endunless -%}
 
           {%- unless block.settings.subtitle == blank -%}
@@ -54,11 +54,33 @@
 
           {%- case block.type -%}
           {%- when "html" -%}
-            {%- if block.settings.html_area != blank -%}
-            <div class="site-footer__custom_html">
-              {{ block.settings.html_area }}
-            </div>
+
+
+            <!-- custom social links  -->
+          <div class="site-footer__socials">
+            {%- if block.settings.facebook_link != blank -%}
+            <a href=" {{ block.settings.facebook_link }}" target="_blank">
+              {%- include 'svg-definitions' with 'facebook' -%}
+              <span class="footer-facebook">Facebook</span>
+            </a>
             {%- endif -%}
+            {%- if block.settings.youtube_link != blank -%}
+            <a href=" {{ block.settings.youtube_link }}" target="_blank">
+              {%- include 'svg-definitions' with 'youtube' -%}
+              <span class="footer-youtube">Youtube</span>
+            </a>
+            {%- endif -%}
+            {%- if block.settings.insta_link != blank -%}
+            <a href=" {{ block.settings.insta_link }}" target="_blank">
+              {%- include 'svg-definitions' with 'instagram' -%}
+              <span class="footer-Instagram">Instagram</span>
+            </a>
+            {%- endif -%}
+          </div>
+
+          <!-- social links end  -->
+
+
           {%- when 'newsletter' -%}
             {%- render 'newsletter-form' -%}
           {%- when 'text' -%}
@@ -234,8 +256,8 @@
 
   <div class="bottom-footer">
     <div class="wrapper">
-      <div class="grid align-center small--text-center">
-        <div class="bottom-footer__copyright grid__item {% if section.settings.show_payment_icons %} large--six-twelfths medium--six-twelfths{% else %} text-center{% endif %}">
+      <div class="footer-bottom  text-center">
+        <div class="footer__item {% if section.settings.show_payment_icons %} footer__paymentIcons {% else %} text-center{% endif %}">
           {%- if settings.show_locale_selector or settings.show_currency_selector -%}
             {%- if settings.localization_position == 'footer' or settings.localization_position == 'header_and_footer' -%}
               {%- render "localization-form", position: "footer", toggle_class: "site-nav__link site-nav__link--icon" -%}
@@ -243,7 +265,7 @@
           {%- endif -%}
 
           <p class="credentials text-small">
-            <span class="text-small">Copyright &copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}</span>
+            <span class="text-small">&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}</span>
             {%- if section.settings.custom_credential != blank -%}
             <span class="rte text-small"> | {{ section.settings.custom_credential | remove: '<p>' | remove: '</p>' }}</span>
             {%- endif -%}
@@ -258,7 +280,7 @@
           </p>
         </div>
         {%- if section.settings.show_payment_icons -%}
-        <div class="grid__item large--five-twelfths medium--five-twelfths large--text-right medium--text-right">
+        <div class="footer__item text-center">
           {%- render 'payment-icons' -%}
         </div>
         {%- endif -%}
@@ -349,10 +371,20 @@
             "label": "Subheading"
           },
           {
-            "type": "html",
-            "id": "html_area",
-            "label": "Custom HTML"
-          }
+            "type": "text",
+            "id": "facebook_link",
+            "label": "Add facebook link"
+            },
+            {
+            "type": "text",
+            "id": "youtube_link",
+            "label": "Add youtube link"
+            },
+            {
+            "type": "text",
+            "id": "insta_link",
+            "label": "Add instagram link"
+            }
         ]
       },
       {
