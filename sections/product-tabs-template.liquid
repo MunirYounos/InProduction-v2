@@ -12,7 +12,7 @@
      data-stacked-layout="{% if section.settings.media_layout == "stacked" %}true{% else %}false{% endif %}"
      data-product-selector="{{ section.settings.product_selector }}"
      {%- if first_3d_model -%}data-has-model="true"{%- endif -%}>
-  {%- render 'product-accordion-template' with product as product -%}
+  {%- render 'product-tabs-template' with product as product -%}
 </div>
 
 {% schema %}
@@ -181,6 +181,12 @@
         "type": "checkbox",
         "id": "show_product_description",
         "label": "Show product description",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_product_description_in_tabs",
+        "label": "Show custom product description in Tabs",
         "default": true
       },
       {

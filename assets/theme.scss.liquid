@@ -1475,6 +1475,7 @@ $class-type: unquote(".");
   opacity: $opacity;
 
   .btn__text {
+    @include button(darken($white,6%), $colorLightGray);
     @include visuallyHidden;
   }
 
@@ -2948,7 +2949,7 @@ button {
 }
 
 .btn-outline-primary {
-  @include button($colorPrimary, $colorButtonText, outline);
+  @include button(lighten($colorPrimary, 24%), $colorButtonText, outline);
 }
 
 .btn-reveal-primary {
@@ -9185,10 +9186,119 @@ body:not(.dbtfy-wish_list-destroy) {
 }
 /* end-dbtfy-collection-filters */
 
+.tabs{
+  padding:0 0 0 8px;
+  @include screenUp($postSmall){
+    padding: 0 $gutter-sm;
+  }
+.tabs__selectors{
+  display: flex;
+  border-bottom: 0;
+  background-color: $white;
+  flex-wrap: wrap;
+  @include screenUp($postSmall){
+    display: flex;
+    border-bottom: 1px solid darken($white, 3%);
+    background-color: $white;
+  }
+  .tab-item {
+    padding: $gutter-xs;
+    font-weight:500;
+    font-size:.79rem;
+    text-transform: uppercase;
+    background-color: darken($white, 3%);
+    border:1px solid darken($white, 5%);
+    @include transition($transitions);
+    @include screenUp($postSmall){
+      padding: $gutter-sm;
+      font-size:.9rem;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($colorPrimary, 26%);
+    }
+  }
+  .tab-active {
+    background-color: lighten($colorPrimary, 28%);
+    border:1px solid rgba(lighten($colorPrimary, 14%), 0.5);
+  }
+}
+.tabs__content {
+  padding:$gutter-sm 0;
+  text-align: left;
+  font-size: 0.85rem;
+  line-height:1.6;
+  color: lighten($colorDarkGray, 10%);
+  .content-body {
+    display: none;
+    h2{
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.85rem;
+    }
+  }
+  .show-active {
+    display: block;
+    min-height:120px;
+    max-width: 90%;
+    font-size: 0.85rem;
+    line-height:1.6;
+    @include animated(fadeIn, $transitionDurationFast);
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
+}
+//product cards
 
-
-
-
+.product-cards{
+  margin: $gutter 0;
+  .grid-card{
+    padding-left: $gutter-sm;
+    .card-contain{
+      padding: $gutter;
+      background-color: darken($white, 3%);
+      width: 100%;
+      margin:($gutter - 8) 0;
+      @include shadow($shadow-sm);
+      @include screenUp($postSmall){
+        padding: $gutter-sm;
+        margin: 0;
+      }
+    }
+    .card-contain.card-row-center{
+      text-align: center;
+      .card__content{
+        padding: $gutter-sm 0;
+        .card__content--title{
+          font-size:1.2rem;
+          color: $colorDarkGray;
+        }
+        .card__content--text{
+          font-size:.75rem;
+          line-height:1.8;
+          color: darken($colorLightGray, 5%);
+        }
+      }
+    }
+    .card-contain.card-row-left{
+      text-align: left;
+      .card__content{
+        padding: $gutter-sm 0;
+        .card__content--title{
+          font-size:1.2rem;
+          color: $colorDarkGray;
+        }
+        .card__content--text{
+          font-size:.75rem;
+          line-height:1.6;
+        }
+      }
+    }
+  }
+}
 .services{
 	.services-wrapper{
 		margin-top: -3rem;

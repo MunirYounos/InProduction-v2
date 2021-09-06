@@ -65,6 +65,9 @@
 {%- if section.settings.show_product_description and product.description != blank -%}
   {%- assign has_description = true -%}
 {%- endif -%}
+{%- if section.settings.show_product_description_in_tabs and product.description != blank -%}
+  {%- assign has_description_tabs = true -%}
+{%- endif -%}
 
 {%- assign is_to_split_description = false -%}
 
@@ -670,7 +673,7 @@
 </div><!-- /.product-single -->
 
 {%- if show_info_section -%}
-<div id="read-more" class="section-description box {{ section.settings.description_style }} {{ section.settings.text_alignment }} {{ section.settings.text_alignment_mobile }}">
+<div  class="section-description box {{ section.settings.description_style }} {{ section.settings.text_alignment }} {{ section.settings.text_alignment_mobile }}">
   <div class="wrapper">
     <div class="grid">
       <div class="grid__item{% unless section.settings.description_full %} large--eight-twelfths push--large--two-twelfths{% endunless %}">
@@ -704,6 +707,82 @@
   </div>
 </div>
 {%- endif -%}
+
+<!-- custom product tabs start  -->
+{%- if has_description_tabs -%}
+  <div class="wrapper">
+    <div class="grid">
+              <div id="productDescription" class="product-single__description tabs rte spacer-bottom-none"
+              itemprop="description">
+    
+              <div id="read-more"  class="tabs__selectors">
+                <div id="tab-1" class="tab-item tab-active">
+                  Beschrijving
+                </div>
+                {%-if show_registeredMedicalDevice -%}
+                <div id="tab-2" class="tab-item">
+                  Medisch geregistreerd
+                </div>
+                {%-endif-%}
+                {%-if show_useAndCare-%}
+                <div id="tab-3" class="tab-item">
+                  Gebruik
+                </div>
+                {%-endif-%}
+                {%-if show_userManual-%}
+                <div id="tab-4" class="tab-item">
+                  Gebruiksaanwijzing
+                </div>
+                {%-endif-%}
+                {%-if show_material -%}
+                <div id="tab-5" class="tab-item">
+                  Materiaal
+                </div>
+                {%-endif-%}
+                {%-if show_deliveryAndReturns-%}
+                <div id="tab-6" class="tab-item">
+                  Levering & Retourneren
+                </div>
+                {%-endif-%}
+              </div>
+              <div class="tabs__content">
+                {%- if  has_description_tabs -%}
+                <div id="tab-1-content" class="content-body show-active">
+                  {{ product.description }}
+                </div>
+                {%- endif -%}
+                {%-if show_registeredMedicalDevice -%}
+                <div id="tab-2-content" class="content-body">
+                  {{product.metafields.tabs.registeredMedicalDevice}}
+                </div>
+                {%- endif -%}
+                {%-if show_useAndCare -%}
+                <div id="tab-3-content" class="content-body">
+                  {{product.metafields.tabs.useAndCare}}
+                </div>
+                {%- endif -%}
+                {%-if show_userManual -%}
+                <div id="tab-4-content" class="content-body">
+                  {{product.metafields.tabs.userManual}}
+                </div>
+                {%- endif -%}
+                {%-if show_material-%}
+                <div id="tab-5-content" class="content-body">
+                  {{product.metafields.tabs.material}}
+                </div>
+                {%- endif -%}
+                {%-if show_deliveryAndReturns-%}
+                <div id="tab-6-content" class="content-body">
+                  {{product.metafields.tabs.deliveryAndReturns}}
+                </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        </div>
+{%- endif -%}
+              <!-- end of product tabs end  -->
+
 
 {%- render "dbtfy-addtocart-animation" -%}
 
