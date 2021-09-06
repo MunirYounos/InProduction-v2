@@ -69,18 +69,16 @@
                   <h2 class="section-mission__title">{{block.settings.mission_title}}</h2>
                   <p class="section-mission__description">{{block.settings.mission_description}}</p>
                   {%-if block.settings.btn_text !=blank -%}
-                  
-                  <a href="{{block.settings.btn_url}}"class="btn-mission">{{block.settings.btn_text}}</a>
-
+                    <a href="{{block.settings.btn_url}}"class="btn-mission">{{block.settings.btn_text}}</a>
+                  {%- endif -%}
                 </div>
-              {%- else -%}
-                <div class="text-center">
-                  {{ 'home_page.onboarding.no_content' | t }}
-                </div>
-              {%- endif -%}
             </div>
           {%- endfor -%}
-        </div>
+         </div>
+          {%- else -%}
+          <div class="text-center">
+            {{ 'home_page.onboarding.no_content' | t }}
+          </div>
       {%- endif -%}
       
       {%- if section.blocks.size == 0 -%}
