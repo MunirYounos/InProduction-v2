@@ -321,6 +321,14 @@
       "next": "Volgende (pijltoets rechts)",
       "prev": "Vorige (pijltoets links)",
       "close": "Sluiten (esc)"
+    },
+    "tabs": {
+      "tab-description": " Beschrijving ",
+      "tab-medical" : " Medisch geregistreerd ",
+      "tab-use" : " Gebruik ",
+      "tab-manual" : " Gebruiksaanwijzing ",
+      "tab-material" : "  Materiaal ",
+      "tab-delivery" : "  Levering & Retourneren "
     }
   },
   "gift_cards": {

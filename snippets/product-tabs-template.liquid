@@ -550,6 +550,7 @@
 										{{product.metafields.sizeChart.sizeTable}}
 									</div>
 								{%- endif -%}
+
                   <div class="product-single__add-to-cart">
                     <button type="submit" name="add" id="AddToCart--{{ section.id }}" class="btn btn--primary btn--add-to-cart full"{% unless current_variant.available %} disabled="disabled"{% endunless %}>
                       <span class="btn__text">
@@ -573,6 +574,7 @@
                 {% render "dbtfy-back-in-stock", product: product, current_variant: current_variant %}
               {%- endif -%}
             </div>
+            
 
                 <!-- Nl basic counter start -->
                 <div class="nlify-counter">
@@ -717,31 +719,31 @@
     
               <div id="read-more"  class="tabs__selectors">
                 <div id="tab-1" class="tab-item tab-active">
-                  Beschrijving
+                  {{ 'products.tabs.tab-description' | t }}
                 </div>
                 {%-if show_registeredMedicalDevice -%}
                 <div id="tab-2" class="tab-item">
-                  Medisch geregistreerd
+                  {{ 'products.tabs.tab-medical' | t }}
                 </div>
                 {%-endif-%}
                 {%-if show_useAndCare-%}
                 <div id="tab-3" class="tab-item">
-                  Gebruik
+                  {{ 'products.tabs.tab-use' | t }}
                 </div>
                 {%-endif-%}
                 {%-if show_userManual-%}
                 <div id="tab-4" class="tab-item">
-                  Gebruiksaanwijzing
+                  {{ 'products.tabs.tab-manual' | t }}
                 </div>
                 {%-endif-%}
                 {%-if show_material -%}
                 <div id="tab-5" class="tab-item">
-                  Materiaal
+                  {{ 'products.tabs.tab-material' | t }}
                 </div>
                 {%-endif-%}
                 {%-if show_deliveryAndReturns-%}
                 <div id="tab-6" class="tab-item">
-                  Levering & Retourneren
+                  {{ 'products.tabs.tab-delivery' | t }}
                 </div>
                 {%-endif-%}
               </div>

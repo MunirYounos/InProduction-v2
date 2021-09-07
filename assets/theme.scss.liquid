@@ -304,7 +304,7 @@ $shadowColor: color-control($colorBody);
 $shadowOpacity: 0.07;
 $shadow: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadow-sm: 0px 0px 20px rgba($shadowColor, $shadowOpacity);
-$shadow-xs: 0px 0px 10px rgba($shadowColor, $shadowOpacity);
+$shadow-xs: 0px 0px 5px rgba($shadowColor, $shadowOpacity);
 $shadowTop: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowBottom: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowLeft: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
@@ -5419,8 +5419,8 @@ cite {
   }
   .collection_grid-product-count {
     position: absolute;
-    top: 14px;
-    right: -22px;
+    top: 20px;
+    right: -29px;
     z-index: 9;
     transform: rotate(90deg);
     padding: 4px 8px;
@@ -6079,7 +6079,7 @@ cite {
 .mobile-nav__has-sublist a,
 .mobile-nav > .mobile-nav__item:not(.mobile-nav__item--secondary) > a {
   @include accentFontStack;
-  font-size: $headerSize5;
+  font-size: 0.79rem;
 }
 
 // Second level links
@@ -9187,10 +9187,7 @@ body:not(.dbtfy-wish_list-destroy) {
 /* end-dbtfy-collection-filters */
 
 .tabs{
-  padding:0 0 0 8px;
-  @include screenUp($postSmall){
-    padding: 0 $gutter-sm;
-  }
+  padding: 0 $gutter-sm;
 .tabs__selectors{
   display: flex;
   border-bottom: 0;
@@ -9261,7 +9258,7 @@ body:not(.dbtfy-wish_list-destroy) {
       background-color: darken($white, 3%);
       width: 100%;
       margin:($gutter - 8) 0;
-      @include shadow($shadow-sm);
+      @include shadow($shadow-xs);
       @include screenUp($postSmall){
         padding: $gutter-sm;
         margin: $gutter-sm 0;
@@ -9621,19 +9618,44 @@ body:not(.dbtfy-wish_list-destroy) {
 }
 
 selector[data-type="languages"][data-id="283692853"] > .active, .ls-sw-languages-283692853 > .active {
-  padding:4px 5px !important;
-  border: 1px solid rgba(233,233,234,0.5) !important;
-  @include screen($small){
-    max-width: 60px;
+padding:4px 5px !important;
+border: 1px solid rgba(233,233,234,0.5) !important;
+@include screen($small){
+  max-width: 60px;
+}
+}
+selector[data-type="languages"][data-id="283692853"] > .active:after, .ls-sw-languages-283692853 > .active:after {
+transform: rotate(-45deg) !important;
+right: 15px !important;
+}
+selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:after, .ls-sw-languages-283692853.ls-sw-closed > .active:after{
+  transform: rotate(135deg)!important;
+}
+
+.qty-container {
+.qb-product_breaks {
+  .radio {
+    .badge {
+      display: none;
+    }
   }
+
+  .radio:nth-of-type(2)::after{
+    content: 'BESPAAR 10%';
+    color: white;
+    background-color:  $colorAccent;
+    padding: 2px 4px;
+
   }
-  selector[data-type="languages"][data-id="283692853"] > .active:after, .ls-sw-languages-283692853 > .active:after {
-  transform: rotate(-45deg) !important;
-  right: 15px !important;
+  .radio:nth-of-type(3)::after{
+    content: 'BESPAAR 20%';
+    color: white;
+    background-color:  $colorAccent;
+    padding: 2px 4px;
   }
-  selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:after, .ls-sw-languages-283692853.ls-sw-closed > .active:after{
-    transform: rotate(135deg)!important;
-  }
+
+}
+}
 
 
 {%- if settings.custom_style != blank -%}

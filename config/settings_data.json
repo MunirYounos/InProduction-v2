@@ -8,7 +8,7 @@
     "icon": "material-icons-outlined",
     "grid_product_truncate": false,
     "collection_grid_card": false,
-    "collection_grid_products_count": true,
+    "collection_grid_products_count": false,
     "collection_grid_animation": true,
     "collection_grid_button_style": "",
     "word_count": 33,
@@ -44,25 +44,93 @@
     "color_transparent_nav_text": "#f7f7f7",
     "opacity_overlay": 16,
     "favicon": "shopify:\/\/shop_images\/fav.png",
+    "social_facebook_link": "www.facebook.com\/anodyne.be",
+    "social_instagram_link": "www.instagram.com\/anodyne.be",
     "header_font_size": 32,
     "header_font_size_big": 50,
     "header_spacing": 0.1,
     "accent_spacing": 0.1,
     "button_uppercase": true,
     "base_font_size": 12,
+    "dbtfy_back_in_stock": true,
+    "dbtfy_cart_countdown": false,
+    "dbtfy_cart_favicon": false,
     "dbtfy_collection_addtocart": false,
+    "dbtfy_collection_filters": false,
     "dbtfy_color_swatches": true,
+    "dbtfy_cookie_box": false,
     "dbtfy_custom_currencies": false,
-    "dbtfy_inactive_tab_message": true,
+    "dbtfy_delivery_time": false,
+    "dbtfy_inactive_tab_message": false,
     "dbtfy_instagram_feed": false,
+    "dbtfy_inventory_quantity": false,
+    "dbtfy_live_view": false,
+    "dbtfy_order_tracking": false,
     "dbtfy_product_tabs": true,
-    "dbtfy_quantity_breaks": false,
+    "dbtfy_quantity_breaks": true,
     "dbtfy_quick_view": true,
+    "dbtfy_sales_countdown": false,
+    "dbtfy_sales_pop": false,
+    "dbtfy_shop_protect": false,
+    "dbtfy_skip_cart": true,
+    "dbtfy_size_chart": false,
+    "synced_variant_image": false,
     "dbtfy_back_in_stock_btn_animation": true,
+    "dbtfy_cart_discount_label": "Kortingscode",
+    "dbtfy_cart_discount_placeholder": "Vul hier je kortingscode in",
+    "dbtfy_cart_discount_apply_button_label": "Gebruik kortingscode",
     "nlify_cart_notification": "Heeft u de maattabel gecontroleerd voor de juiste maat?",
+    "dbtfy_cart_goal_before_text": "Nog",
+    "dbtfy_cart_goal_amount": "0",
+    "dbtfy_cart_goal_after_text": "te gaan tot GRATIS verzending!",
+    "dbtfy_cart_goal_reached_text": "Gratis verzending!",
+    "dbtfy_cart_discount_savings_label": "Totale besparing",
     "dbtfy_inactive_tab_message_text_first": "👕 up to 50% off",
     "dbtfy_inactive_tab_message_text_second": "👕 Anodyne discounts",
     "dbtfy_inventory_quantity_threshold": 20,
+    "dbtfy_menu_bar_link_list": "main-menu",
+    "dbtfy_menu_bar_desktop": false,
+    "dbtfy_newsletter_floating_bar": false,
+    "dbtfy_floating_bar_text": "Ontvang extra korting",
+    "dbtfy_newsletter_popup_title": "Schrijf je in op onze nieuwsbrief!",
+    "dbtfy_newsletter_popup_text": "<p>Ontvang 10% <strong>EXTRA<\/strong> korting op je eerste aankoop door je in te schrijven voor onze nieuwsbrief.<\/p>",
+    "dbtfy_newsletter_popup_close": "Nee, dank je",
+    "dbtfy_newsletter_popup_title_success": "Dankjewel!",
+    "dbtfy_newsletter_popup_text_success": "<p>Kopieer de kortingscode hieronder en plak hem in je mandje om je korting te krijgen!<\/p>",
+    "dbtfy_newsletter_popup_reward_button": "Kortingscode gebruiken",
+    "dbtfy_newsletter_popup_discount_name": "R6QG31",
+    "dbtfy_newsletter_popup_discount_amount": "10",
+    "dbtfy_order_feedback_select_title": "Hoe heeft u ons gevonden?",
+    "dbtfy_order_feedback_default_options": "Maak een keuze",
+    "dbtfy_order_feedback_select_options": "Fysiotherapeut, Social Media, Google",
+    "dbtfy_order_feedback_error_message": "Gelieve hieronder een optie te kiezen",
+    "dbtfy_order_feedback_other_option": "Anders",
+    "dbtfy_order_feedback_other_placeholder": "Anders, namelijk",
+    "dbtfy_order_feedback_error_message_other": "Gelieve het onderstaande tekstveld in te vullen",
+    "dbtfy_order_feedback_title": "Hoe heeft u ons gevonden?",
+    "dbtfy_order_feedback_other_title": "Hoe heeft u ons gevonden? (anders)",
+    "dbtfy_recently_viewed_title": "Recent bekeken",
+    "dbtfy_smart_search_products": "Producten",
+    "dbtfy_smart_search_collections": "Collecties",
+    "dbtfy_smart_search_articles": "Artikelen",
+    "dbtfy_smart_search_pages": "Pagina's",
+    "dbtfy_smart_search_all": "Laat alle resultaten zien",
+    "dbtfy_social_discount_link": "Deel en krijg 10% korting!",
+    "dbtfy_social_discount_popup_title": "Deel en krijg 10% korting!",
+    "dbtfy_social_discount_popup_text": "Deel dit met je vrienden en krijg 10% korting!",
+    "dbtfy_social_discount_reward_title": "Bedankt voor het delen!",
+    "dbtfy_social_discount_reward_text": "<p>Kopieer de kortingscode hieronder en plak hem in je mandje om je korting te krijgen!<\/p>",
+    "dbtfy_social_discount_reward_button": "Gebruik kortingscode",
+    "dbtfy_social_discount_reward_code": "20GWS15",
+    "dbtfy_social_discount_reward_amount": "10",
+    "dbtfy_trust_badge_text": "Gegarandeerd veilig & betrouwbaar afrekenen",
+    "dbtfy_wish_list_add_text": "Voeg toe aan verlanglijstje",
+    "dbtfy_wish_list_remove_text": "Verwijder van verlanglijst",
+    "dbtfy_wish_list_empty_text": "Je verlanglijstje is op dit moment leeg.",
+    "dbtfy_wish_list_share_label": "Deel verlanglijstje",
+    "checkout_logo_image": "shopify:\/\/shop_images\/anLOGOF.png",
+    "checkout_accent_color": "#83d0bd",
+    "checkout_button_color": "#83d0bd",
     "sections": {
       "dbtfy-upsell-popup": {
         "type": "dbtfy-upsell-popup",
@@ -88,13 +156,13 @@
               "product_break_tags": "",
               "product_break_product": "",
               "product_break_range_1": 2,
-              "product_break_discount_code_1": "Test2",
-              "product_break_discount_amount_1": "19",
-              "product_break_discount_type_1": "%",
+              "product_break_discount_code_1": "2x Posture Shirt",
+              "product_break_discount_amount_1": "13",
+              "product_break_discount_type_1": "$",
               "product_break_range_2": 3,
-              "product_break_discount_code_2": "Test3",
-              "product_break_discount_amount_2": "38",
-              "product_break_discount_type_2": "%",
+              "product_break_discount_code_2": "3x Posture Shirt",
+              "product_break_discount_amount_2": "42",
+              "product_break_discount_type_2": "$",
               "product_break_range_3": 2,
               "product_break_discount_code_3": "",
               "product_break_discount_amount_3": "",
@@ -114,7 +182,7 @@
           "3ecae9fd-6b11-4a20-84b1-0e99e2faaaa2"
         ],
         "settings": {
-          "dbtfy_quantity_breaks_text": "",
+          "dbtfy_quantity_breaks_text": "test",
           "dbtfy_quantity_breaks_single_text": "Buy _COUNT_: _PRICE_ _SAVED_AMOUNT_",
           "dbtfy_quantity_breaks_price_type": "total_price",
           "dbtfy_quantity_breaks_more_discount_text_before": "Add",
@@ -183,7 +251,7 @@
           "announcement-0": {
             "type": "message",
             "settings": {
-              "announcement_text": "<p>Free shipping worldwide | 30-Day free returns<\/p>"
+              "announcement_text": "<p>Gratis <strong>verzending<\/strong> | 30 dagen volledig retourrecht ✓<\/p>"
             }
           }
         },
@@ -195,8 +263,8 @@
           "show_social": true,
           "email": true,
           "phone": true,
-          "left_message": "<p>Follow us!<\/p>",
-          "right_message": "<p>Get in touch with us<\/p>",
+          "left_message": "<p>Volg ons!<\/p>",
+          "right_message": "<p><a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">Contact<\/a><\/p>",
           "announcement_autoplayspeed": 5
         }
       },
@@ -495,7 +563,7 @@
           "show_product_recommendations": true,
           "title": "Recommended for you",
           "subtitle": "",
-          "section_style": "section-border",
+          "section_style": "section-blank",
           "rows": "2",
           "desktop_grid": "4",
           "mobile_grid": "2",
@@ -548,8 +616,8 @@
       "quotes": {
         "type": "quotes",
         "settings": {
-          "show_on_desktop": true,
-          "show_on_mobile": true,
+          "show_on_desktop": false,
+          "show_on_mobile": false,
           "title": "Testimonials",
           "subtitle": "",
           "section_style": "section-blank",
@@ -584,7 +652,7 @@
             "type": "service",
             "settings": {
               "title": "Gratis verzending",
-              "description": "Bij aankoop van meer dan €59",
+              "description": "Op alle producten",
               "icon": "shopify:\/\/shop_images\/Truck_100px.png",
               "uspLinkUrl": ""
             }
@@ -680,14 +748,13 @@
           "b1098b0a-da6e-4795-8ddc-230d0010ed64": {
             "type": "html",
             "settings": {
-              "image": "shopify:\/\/shop_images\/3dFrontpage.png",
               "mission_title": "Wij zijn gespecialiseerd in houdingcorrectie en verlichting van pijn",
               "mission_description": "Al 7 jaar streven wij ernaar toegang te verschaffen tot gemakkelijke en effectieve producten voor houdingscorrectie en pijnverlichting. Onze belangrijkste filosofie is dat we geen producten verkopen die we zelf niet zouden gebruiken. Sinds 2014 hebben we meer dan 300.000 tevreden klanten in Europa en we zijn van plan om er in de toekomst nog veel meer te hebben.",
               "column_width": 12,
               "column_width_mobile": 12,
               "text_alignment": "text-center",
-              "btn_text": "mission",
-              "btn_url": "shopify:\/\/collections"
+              "btn_text": "",
+              "btn_url": ""
             }
           }
         },
@@ -763,15 +830,15 @@
         "settings": {
           "show_on_desktop": true,
           "show_on_mobile": true,
-          "title": "MEEST VERKOCHTE PRODUCTEN",
+          "title": "Meest verkochte producten",
           "subtitle": "",
           "section_style": "section-blank",
-          "home_featured_products": "posture-shirt",
+          "home_featured_products": "alle-producten",
           "rows": "1",
           "desktop_grid": "4",
           "mobile_grid": "2",
           "show_view_all": true,
-          "button_label": "View all",
+          "button_label": "Bekijk alle",
           "button_link": "shopify:\/\/collections",
           "button_style": "",
           "slider_related_products": false,
@@ -802,7 +869,7 @@
               "image": "shopify:\/\/shop_images\/Smile_100px.png",
               "icon": "",
               "title": "Houdingcorrigerende kleding met 100% tevredenheidsgarantie",
-              "text": "<p>Bij Anodyne® bieden we altijd gratis verzending bij aankoop van meer dan 59 €, 100% tevredenheidsgarantie, 30 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 30 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 300.000 klanten, die de afgelopen 7 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
+              "text": "<p>Bij Anodyne® bieden we altijd gratis verzending, 100% tevredenheidsgarantie, 30 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 30 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 300.000 klanten, die de afgelopen 7 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
               "button_style": "btn--primary",
               "button_label": "",
               "button_link": ""
@@ -816,8 +883,8 @@
               "title": "Van kinesiotape tot houdingcorrigerende kleding",
               "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
               "button_style": "btn--primary",
-              "button_label": "Aanbiedingen",
-              "button_link": "shopify:\/\/collections\/posture-shirt"
+              "button_label": "",
+              "button_link": ""
             }
           }
         },
@@ -939,45 +1006,16 @@
           "visibility_tags_count": "all"
         }
       },
-      "product-accordion-template": {
-        "type": "product-accordion-template",
-        "blocks": {
-          "91482a98-ed0f-4a52-bbc1-939c8b71b309": {
-            "type": "description",
-            "settings": {
-              "dbtfy_product_tabs_open": true,
-              "dbtfy_product_tabs_icons": "",
-              "dbtfy_product_tabs_title": "Details ASDFASDFA"
-            }
-          },
-          "edf4def2-c272-4a59-9185-76fb789985ab": {
-            "type": "text",
-            "settings": {
-              "dbtfy_product_tabs_open": false,
-              "text_alignment": "",
-              "dbtfy_product_tabs_icons": "",
-              "dbtfy_product_tabs_title": "Rich text",
-              "dbtfy_product_tabs_text": "<p>Het Posture Shirt™ voor vrouwen is gemaakt van slijtvaste en ademende materialen die nauw aansluiten op de huid – zonder dat dit invloed heeft op je bewegingsvrijheid. Je wordt niet in je bezigheden belemmerd. De unieke materialenmix zorgt voor veel rekbaarheid en daardoor een goede pasvorm en veel comfort. Het Posture Shirt™ 2.0 heeft PowerMesh panelen, waardoor het ademend is. Het shirt heeft ook een antimicrobiële behandeling ondergaan, waardoor het transpiratievocht kan afvoeren. Materiaal: Spa<\/p>",
-              "dbtfy_product_tabs_html": "Het Posture Shirt™ voor vrouwen is gemaakt van slijtvaste en ademende materialen die nauw aansluiten op de huid – zonder dat dit invloed heeft op je bewegingsvrijheid. Je wordt niet in je bezigheden belemmerd. De unieke materialenmix zorgt voor veel rekbaarheid en daardoor een goede pasvorm en veel comfort. Het Posture Shirt™ 2.0 heeft PowerMesh panelen, waardoor het ademend is. Het shirt heeft ook een antimicrobiële behandeling ondergaan, waardoor het transpiratievocht kan afvoeren. Materiaal: Spa",
-              "dbtfy_product_tabs_type": "",
-              "dbtfy_product_tabs_tag": "",
-              "dbtfy_product_tabs_product": "womens-posture-shirt-wit",
-              "dbtfy_product_tabs_collection": ""
-            }
-          }
-        },
-        "block_order": [
-          "91482a98-ed0f-4a52-bbc1-939c8b71b309",
-          "edf4def2-c272-4a59-9185-76fb789985ab"
-        ],
+      "product-tabs-template": {
+        "type": "product-tabs-template",
         "settings": {
-          "dbtfy_product_tabs_position": "separate_section",
+          "dbtfy_product_tabs_position": "under_description",
           "show_product_vendor": false,
           "show_product_type": false,
           "show_product_sku": false,
           "product_title_large": false,
           "show_product_tags": false,
-          "show_sharing_icons": false,
+          "show_sharing_icons": true,
           "show_product_collections": false,
           "enable_image_zoom": true,
           "enable_video_looping": true,
@@ -986,12 +1024,83 @@
           "quantity_enabled": true,
           "product_selector": "radio",
           "show_product_description": false,
+          "show_product_description_in_tabs": true,
           "enable_split_description": false,
-          "description_full": true,
+          "description_full": false,
           "dbtfy_product_description_position": "separate_section",
-          "description_style": "section-blank",
-          "text_alignment": "",
-          "text_alignment_mobile": "small--text-left"
+          "description_style": "section-border",
+          "text_alignment": "text-center",
+          "text_alignment_mobile": "small--text-center"
+        }
+      },
+      "product-cards": {
+        "type": "product-cards",
+        "blocks": {
+          "fe32e93f-234c-450d-8d07-e2efbc25f40e": {
+            "type": "row",
+            "settings": {
+              "card__icon": "shopify:\/\/shop_images\/Customerservice_copy_100px_1.png",
+              "title": "Klantenservice",
+              "text": "<p>Neem contact met ons op via telefoon <a href=\"tel:+31 (0) 20-26 22 008\"><strong>+31 (0) 20-26 22 008<\/strong><\/a> of <a href=\"mailto:info@anodyne.nl\" title=\"mailto:info@anodyne.nl\"><strong>info@anodyne.nl<\/strong><\/a> als je vragen hebt over maten, prijzen of iets anders.<\/p>",
+              "card__alignement": "center",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "1c9774d2-047f-45d4-8645-84edb4bf51cd": {
+            "type": "row",
+            "settings": {
+              "card__icon": "shopify:\/\/shop_images\/Truck_100px.png",
+              "title": "Gratis verzending bij aankoop van meer dan €59",
+              "text": "<p>Levering in 1-3 werkdagen<\/p>",
+              "card__alignement": "center",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "86e60ed0-4f89-453b-bb6d-998997ba5497": {
+            "type": "row",
+            "settings": {
+              "card__icon": "shopify:\/\/shop_images\/Returns_100px.png",
+              "title": "Gratis retourneren en ruilen",
+              "text": "<p>Wij zorgen voor een retourlabel<\/p>",
+              "card__alignement": "center",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "cb8805d6-2cd1-4b82-aa5e-bcd50bd85ebc": {
+            "type": "row",
+            "settings": {
+              "card__icon": "shopify:\/\/shop_images\/Smile_100px.png",
+              "title": "100% Tevredenheidsgarantie",
+              "text": "<p>30 dagen volledig retourrecht<\/p>",
+              "card__alignement": "center",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          }
+        },
+        "block_order": [
+          "fe32e93f-234c-450d-8d07-e2efbc25f40e",
+          "1c9774d2-047f-45d4-8645-84edb4bf51cd",
+          "86e60ed0-4f89-453b-bb6d-998997ba5497",
+          "cb8805d6-2cd1-4b82-aa5e-bcd50bd85ebc"
+        ],
+        "settings": {
+          "show_product_card": true
         }
       }
     },

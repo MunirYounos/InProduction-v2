@@ -321,6 +321,14 @@
       "next": "Suivant (flèche droite)",
       "prev": "Précédent (flèche gauche)",
       "close": "Fermer (Esc)"
+    },
+    "tabs": {
+      "tab-description": " frfrfrfrjving ",
+      "tab-medical" : " frrfdisch gestreerd ",
+      "tab-use" : " frfrruik ",
+      "tab-manual" : " frfrfrnwijzing ",
+      "tab-material" : "  Mafrfrfriaal ",
+      "tab-delivery" : "  Lefrfrfr & Retoufrfrfr "
     }
   },
   "gift_cards": {
