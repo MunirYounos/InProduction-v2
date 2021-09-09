@@ -1894,7 +1894,7 @@ $class-type: unquote(".");
 
   // Text
   .text-primary { color: $primary }
-  .text-secondary { color: $secondary }
+  .text-secondary { color: $text }
   .text-sale { color: $sales }
 
   // Form feedback
@@ -5681,7 +5681,7 @@ cite {
   right: 5px;
   bottom: 5px;
   border: 2px solid $colorNav;
-  background-color: $colorSecondary;
+  background-color: $colorAccent;
   border-radius: $circle;
   @include transition($transitions);
 
@@ -7106,7 +7106,7 @@ body {
 // Text
 .text-ellipsis {@include ellipsis}
 .text-primary {color: $colorPrimary}
-.text-secondary {color: $colorSecondary}
+.text-secondary {color: $colorDarkGray}
 .text-sale {color: $colorSalesPrice}
 .text-small {font-size: ($baseFontSize-sm + 1)}
 .text-large {font-size: $baseFontSize-lg}
@@ -9656,6 +9656,55 @@ selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:afte
 
 }
 }
+
+
+  // cradio
+  .cs-product_breaks {
+   margin:-($gutter-sm) 0 $gutter-sm 0;
+   padding: $gutter-sm;
+   border: 1px solid darken($white, 5%);
+   background-color: darken($white, 3%);
+    .csradio-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      label {
+        margin-left: 6px;
+        font-family: inherit;
+        font-size:1rem;
+        font-weight:500;
+      }
+      input[type='radio']:after {
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        top: -5px;
+        left: -1px;
+        position: relative;
+        background-color: darken($white, 4%);
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid darken($white, 12%);
+    }
+
+    input[type='radio']:checked:after {
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        top: -5px;
+        left: -1px;
+        position: relative;
+        background-color: $colorPrimary;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid darken($white, 12%);
+    }
+
+    }
+  }
+
 
 
 {%- if settings.custom_style != blank -%}

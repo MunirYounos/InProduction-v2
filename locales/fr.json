@@ -323,12 +323,12 @@
       "close": "Fermer (Esc)"
     },
     "tabs": {
-      "tab-description": " frfrfrfrjving ",
-      "tab-medical" : " frrfdisch gestreerd ",
-      "tab-use" : " frfrruik ",
-      "tab-manual" : " frfrfrnwijzing ",
-      "tab-material" : "  Mafrfrfriaal ",
-      "tab-delivery" : "  Lefrfrfr & Retoufrfrfr "
+      "tab-description": " Description ",
+      "tab-medical" : " Technologie ",
+      "tab-use" : " Utilisation du produit ",
+      "tab-manual" : " Manual ",
+      "tab-material" : " Matériau ",
+      "tab-delivery" : "  Livraison et retour "
     }
   },
   "gift_cards": {

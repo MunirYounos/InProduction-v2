@@ -363,5 +363,5 @@
     {%- if request.page_type == "product" -%}
     <script src="{{ 'belify-counter.js' | asset_url }}" ></script>
     {%- endif -%}
-  </body>
+  {% render 'awesome-quantity', product: product %}</body>
 </html>

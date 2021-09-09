@@ -463,3 +463,36 @@
     ]
   }
 {% endschema %}
+{% comment %}
+Script to use Awesome Quantity in Homepage. (Note that it works with only ONE product in Home page)
+{% endcomment %}
+
+<script type="text/javascript">
+  window.AwesomeQuantityBreak = { ...window.AwesomeQuantityBreak };
+
+  {% if customer %}
+  window.AwesomeQuantityBreak.customerTags = "{{customer.tags | join: ','}}";
+  window.AwesomeQuantityBreak.customerId = "{{customer.id}}";
+  {% endif %}
+
+  {% unless product.id == blank %}
+  window.AwesomeQuantityBreak.product = {{product | json}};
+  window.AwesomeQuantityBreak.productCollectionIds = [];
+  {% for c in product.collections %}
+  window.AwesomeQuantityBreak.productCollectionIds.push({{c.id}});
+  {% endfor %}
+  {% endunless %}
+
+  {% if cart %}
+  window.AwesomeQuantityBreak.cart = {{cart | json}};
+  {% endif %}
+  {% if shop %}
+  window.AwesomeQuantityBreak.moneyFormat = {{shop.money_format | json}};
+  window.AwesomeQuantityBreak.currency = {{shop.currency | json}};
+  window.AwesomeQuantityBreak.defaultCurrency = {{settings.default_currency | json}};
+  {% endif %}
+</script>
+
+{% comment %}
+  End script Awesome Quantity
+{% endcomment %}

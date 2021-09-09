@@ -1578,6 +1578,22 @@
     ]
   },
   {
+    "name": "Custom Quantity Breaks",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Activate Custom Quantity Breaks"
+      },
+      {
+        "type": "checkbox",
+        "id": "custom_quantity_breaks",
+        "label": "Our Quantity breaks",
+        "info": "Reward customers with discount codes when they purchase multiple items from your store.",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "✅ Debutify Add-ons (54)",
     "settings": [
       {

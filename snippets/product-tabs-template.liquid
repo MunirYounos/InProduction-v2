@@ -523,27 +523,40 @@
 
                   {%- assign hide_quantity_box = true -%}
 
-                  {%- if section.settings.quantity_enabled or settings.dbtfy_quantity_breaks or settings.dbtfy_inventory_quantity -%}
+                  {%- if section.settings.quantity_enabled or settings.custom_quantity_breaks  -%}
                     {%- assign hide_quantity_box = false -%}
                   {%- endif -%}
 
-                  {%- if section.settings.quantity_enabled or settings.dbtfy_quantity_breaks or settings.dbtfy_inventory_quantity -%}
+
+             
+
+
+                  {%- if section.settings.quantity_enabled or settings.custom_quantity_breaks  -%}
                     <div class="product-single__quantity spacer-bottom" {%- if hide_quantity_box -%}hidden{%- endif -%}>
-                      {%- assign quantity_id = 'product-' | append: product.id -%}
+                          {%- assign quantity_id = 'product-' | append: product.id -%}
 
-                      {%- if section.settings.quantity_enabled or settings.dbtfy_quantity_breaks -%}
-                        <label class="inline-label" for="{{ quantity_id }}" {% if section.settings.quantity_enabled == false and settings.dbtfy_quantity_breaks %}hidden {% endif %}>{{ 'products.product.quantity' | t }}</label>
-                      {%- endif -%}
+                          {%- if section.settings.quantity_enabled or settings.custom_quantity_breaks -%}
+                            <label class="inline-label" for="{{ quantity_id }}" {% if section.settings.quantity_enabled == false and settings.custom_quantity_breaks %}hidden {% endif %}>{{ 'products.product.quantity' | t }}</label>
+                          {%- endif -%}
 
-                      {%- render "dbtfy-inventory-quantity", product: product -%}
+                          {%- render "dbtfy-inventory-quantity", product: product -%}
 
-                      {%- if section.settings.quantity_enabled -%}
-                        {%- render "quantity-selector", type: "product", id: quantity_id -%}
-                      {%- elsif settings.dbtfy_quantity_breaks -%}
-                        <div class="qty-container"></div>
-                      {%- endif -%}
+                          {%- if section.settings.quantity_enabled -%}
+                               {% if collection.handle == "posture-shirt" %}
+                                    {%- assign hide_quantity_box = false -%}
+                                {%- else -%}
+                                {%- render "quantity-selector", type: "product", id: quantity_id -%}
+                            {%- endif -%}
+                          {%- elsif settings.custom_quantity_breaks -%}
+                  
+                       {%- endif -%}
                     </div>
                   {%- endif -%}
+                      <!-- custom quantity breaks -->
+                      {% if collection.handle == "posture-shirt" %}
+                      {%- assign hide_quantity_box = false -%}
+                      {%- render "posture-shirt-radios" -%}
+                      {%- endif -%}
 									<!-- size-chart -->
 									{%- if show_sizeGuide == true -%}
 									<div class="custom_size_chart">

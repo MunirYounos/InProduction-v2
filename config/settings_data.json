@@ -72,7 +72,7 @@
     "dbtfy_sales_countdown": false,
     "dbtfy_sales_pop": false,
     "dbtfy_shop_protect": false,
-    "dbtfy_skip_cart": true,
+    "dbtfy_skip_cart": false,
     "dbtfy_size_chart": false,
     "synced_variant_image": false,
     "dbtfy_back_in_stock_btn_animation": true,
@@ -635,12 +635,13 @@
           "height": "medium",
           "newvideo_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0568\/4297\/7439\/files\/anodyne_cover_video.mp4?v=1627576656",
           "show_overlay": false,
+          "image": "shopify:\/\/shop_images\/video-cover.png",
           "image_position": "center center",
-          "video_title": "Online Demo sale updated",
+          "video_title": "Posture Shirt™",
           "text_size": "medium",
-          "text_description": "<p>Bespaar <strong>25-50%<\/strong> op alle demo-producten<\/p>",
+          "text_description": "<p>Verbeter je houding en verminder rugpijn en spanningen<\/p>",
           "text_description_size": "medium",
-          "button_label": "Aanbiedingen",
+          "button_label": "Lees meer",
           "button_link": "shopify:\/\/collections\/demo-sale",
           "show_scrolldown": true
         }
@@ -779,7 +780,7 @@
               "icon": "format_quote",
               "quote": "<p>Alweer top en snelle service voor een uitstekend product..<\/p>",
               "stars_pic": "shopify:\/\/shop_images\/images.png",
-              "quotes_link": "https:\/\/nl.trustpilot.com\/review\/anodyne.nl",
+              "quotes_link": "https:\/\/nl-be.trustpilot.com\/review\/anodyne.be?stars=5",
               "author": "Gathier R."
             }
           },
@@ -790,7 +791,7 @@
               "icon": "format_quote",
               "quote": "<p>Super tevreden over de t-shirts. Ik voel het verschil bij het dragen. Ik loop rechter hierdoor en heb geen nek- en hoofdpijn meer.<\/p>",
               "stars_pic": "shopify:\/\/shop_images\/images.png",
-              "quotes_link": "https:\/\/nl.trustpilot.com\/review\/anodyne.nl",
+              "quotes_link": "https:\/\/nl-be.trustpilot.com\/review\/anodyne.be?stars=5",
               "author": "Nancy"
             }
           },
@@ -801,7 +802,7 @@
               "icon": "format_quote",
               "quote": "<p>Dit materiaal is echt goed. Ik ben na 3 operaties nog steeds in revalidatie en als je deze t-shirts aan hebt is dat meer dan goed.<\/p>",
               "stars_pic": "shopify:\/\/shop_images\/images.png",
-              "quotes_link": "https:\/\/nl.trustpilot.com\/review\/anodyne.nl",
+              "quotes_link": "https:\/\/nl-be.trustpilot.com\/review\/anodyne.be?stars=5",
               "author": "Johan B."
             }
           }
