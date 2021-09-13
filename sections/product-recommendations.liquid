@@ -1,6 +1,6 @@
 {%- if section.settings.show_product_recommendations -%}
   {%- assign limit = section.settings.desktop_grid | times: section.settings.rows -%}
-
+ 
   {%- if recommendations.performed -%}
     {%- if recommendations.products_count > 0 -%}
       <div class="product-recommendations">

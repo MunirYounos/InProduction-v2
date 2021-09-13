@@ -2,7 +2,7 @@
   <div class="box-mission">
     <div class="wrapper{{ section.settings.wrapper_size }}">
       {%- if section.blocks.size > 0 -%}
-        <div class="grid grid-spacer">
+        <div class="grid grid-spacer mission__grid">
           <!-- Blocks -->
           {%- for block in section.blocks -%}
 
@@ -150,6 +150,10 @@
 		      {
             "value": "-full",
             "label": "Full"
+          },
+          {
+            "value": "-small",
+            "label": "small"
           }
         ]
       }

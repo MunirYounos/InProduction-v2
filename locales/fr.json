@@ -79,6 +79,9 @@
     },
     "localization": {
       "submit_label": "Mettre à jour les préférences"
+    },
+    "locales": {
+      "locale": "Produits associés"
     }
   },
   "blogs": {
@@ -324,11 +327,15 @@
     },
     "tabs": {
       "tab-description": " Description ",
-      "tab-medical" : " Technologie ",
-      "tab-use" : " Utilisation du produit ",
-      "tab-manual" : " Manual ",
-      "tab-material" : " Matériau ",
-      "tab-delivery" : "  Livraison et retour "
+      "tab-medical": " Technologie ",
+      "tab-use": " Utilisation du produit ",
+      "tab-manual": " Manual ",
+      "tab-material": " Matériau ",
+      "tab-delivery": "  Livraison et retour "
+    },
+    "radios": {
+      "radio-one": "Acheter",
+      "radio-save-amount": "Économisez"
     }
   },
   "gift_cards": {

@@ -1,24 +1,25 @@
   <!-- custom input radio buttons -->
-<div class="cs-product_breaks">
-	<div class="csradio-container  product-single__form product-form__item">
+
+	<div class="radio  product-single__form product-form__item">
 	
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 		{% if option.selected_value == value %} checked="checked"{% endif %} id="Quantity-1" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
 
-		<label for="Quantity-break-1-0">Buy 1: 
+		<label for="Quantity-1">{{ 'products.radios.radio-one' | t }} 1: 
 			<span class="qb-radio text-money">
+				<span class="qb-discounted-price on-sale text-sale">
 				<span class="money">
 					€79,00
 
-		</span></span></label>
+		</span></span></span></label>
 		</div>
 
-	<div class="csradio-container product-single__form product-form__item">
+	<div class="radio product-single__form product-form__item">
 
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 	id="Quantity-2" name="quantity" value="2" min="2" class="product-form__input" pattern="[0-9]*">
 
-		<label for="Quantity-break-1-1">Buy 2: 
+		<label for="Quantity-2">{{ 'products.radios.radio-one' | t }} 2: 
 			<span class="qb-radio text-money">
 				<span class="qb-discounted-price on-sale text-sale">
 					<span class="money">
@@ -32,18 +33,18 @@
 					</span>
 				</span>
 				<span class="badge qb-saved-amount">
-					Bespaar <span class="money">€10,00</span>
+					{{ 'products.radios.radio-save-amount' | t }}  <span class="money">10%</span>
 				</span>
 			</span>
 		</label>
 
 	</div>
 
-		<div class="csradio-container product-single__form product-form__item">
+		<div class="radio product-single__form product-form__item">
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 		id="Quantity-3" name="quantity" value="3" min="3" class="product-form__input" pattern="[0-9]*">
 
-		<label for="Quantity-break-1-2">Buy 3: 
+		<label for="Quantity-3">{{ 'products.radios.radio-one' | t }} 3: 
 			<span class="qb-radio text-money">
 				<span class="qb-discounted-price on-sale text-sale">
 					<span class="money">
@@ -57,13 +58,13 @@
 					</span>
 				</span>
 				<span class="badge qb-saved-amount">
-					Bespaar <span class="money">€12,00</span>
+					{{ 'products.radios.radio-save-amount' | t }} <span class="money">20%</span>
 				</span>
 			</span>
 		
 
 		</label>
 	</div>
-</div>
+
 
 <!-- end of custom radio buttons -->

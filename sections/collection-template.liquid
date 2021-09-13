@@ -237,6 +237,7 @@
           {%- endfor -%}
         </div>
 
+        {%- render "pagination" with paginate as paginate -%}
 
         {%- if collection_description != blank -%}
         {{ collection_description }}
@@ -244,7 +245,6 @@
 
 
 
-        {%- render "pagination" with paginate as paginate -%}
       {%- endpaginate -%}
     </div>
   </div>

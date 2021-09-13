@@ -51,7 +51,8 @@
     "header_spacing": 0.1,
     "accent_spacing": 0.1,
     "button_uppercase": true,
-    "base_font_size": 12,
+    "base_font_size": 14,
+    "custom_quantity_breaks": true,
     "dbtfy_back_in_stock": true,
     "dbtfy_cart_countdown": false,
     "dbtfy_cart_favicon": false,
@@ -65,10 +66,11 @@
     "dbtfy_instagram_feed": false,
     "dbtfy_inventory_quantity": false,
     "dbtfy_live_view": false,
+    "dbtfy_mega_menu": true,
     "dbtfy_order_tracking": false,
     "dbtfy_product_tabs": true,
-    "dbtfy_quantity_breaks": true,
-    "dbtfy_quick_view": true,
+    "dbtfy_quantity_breaks": false,
+    "dbtfy_quick_view": false,
     "dbtfy_sales_countdown": false,
     "dbtfy_sales_pop": false,
     "dbtfy_shop_protect": false,
@@ -131,6 +133,7 @@
     "checkout_logo_image": "shopify:\/\/shop_images\/anLOGOF.png",
     "checkout_accent_color": "#83d0bd",
     "checkout_button_color": "#83d0bd",
+    "custom_inventory_quantity": true,
     "sections": {
       "dbtfy-upsell-popup": {
         "type": "dbtfy-upsell-popup",
@@ -156,12 +159,12 @@
               "product_break_tags": "",
               "product_break_product": "",
               "product_break_range_1": 2,
-              "product_break_discount_code_1": "2x Posture Shirt",
-              "product_break_discount_amount_1": "13",
+              "product_break_discount_code_1": "Test2",
+              "product_break_discount_amount_1": "10",
               "product_break_discount_type_1": "$",
               "product_break_range_2": 3,
-              "product_break_discount_code_2": "3x Posture Shirt",
-              "product_break_discount_amount_2": "42",
+              "product_break_discount_code_2": "Test3",
+              "product_break_discount_amount_2": "12",
               "product_break_discount_type_2": "$",
               "product_break_range_3": 2,
               "product_break_discount_code_3": "",
@@ -176,10 +179,20 @@
               "product_break_discount_amount_5": "",
               "product_break_discount_type_5": "%"
             }
+          },
+          "8893dfdd-3b93-46ae-af01-1c25d217f5fc": {
+            "type": "cart-break",
+            "settings": {
+              "cart_break_range": 2,
+              "cart_break_discount_code": "",
+              "cart_break_discount_amount": "",
+              "cart_break_discount_type": "%"
+            }
           }
         },
         "block_order": [
-          "3ecae9fd-6b11-4a20-84b1-0e99e2faaaa2"
+          "3ecae9fd-6b11-4a20-84b1-0e99e2faaaa2",
+          "8893dfdd-3b93-46ae-af01-1c25d217f5fc"
         ],
         "settings": {
           "dbtfy_quantity_breaks_text": "test",
@@ -241,8 +254,8 @@
           "phone": true,
           "show_social_medias": true,
           "title": "Menu",
-          "drawer_top_link_list": "main-menu",
-          "drawer_bottom_link_list": "footer"
+          "drawer_top_link_list": "drawer-menu-mobile",
+          "drawer_bottom_link_list": "drawer-menu-customerservice"
         }
       },
       "announcement": {
@@ -306,8 +319,8 @@
             "type": "text",
             "settings": {
               "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "title": "",
+              "text": "<p>Gratis retourneren en ruilen<\/p>",
               "button_style": "btn-outline-primary",
               "button_label": "",
               "button_link": ""
@@ -317,8 +330,8 @@
             "type": "text",
             "settings": {
               "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "title": "",
+              "text": "<p>Gratis verzending<\/p>",
               "button_style": "btn-outline-primary",
               "button_label": "",
               "button_link": ""
@@ -328,8 +341,8 @@
             "type": "text",
             "settings": {
               "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "title": "",
+              "text": "<p>30 dagen volledig retourrecht<\/p>",
               "button_style": "btn-outline-primary",
               "button_label": "",
               "button_link": ""
@@ -340,8 +353,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Customerservice_copy_100px.png",
               "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "title": "",
+              "text": "<p>Neem contact met ons op<\/p>",
               "button_style": "btn-outline-primary",
               "button_label": "",
               "button_link": ""
@@ -378,7 +391,7 @@
               "column_width": 1,
               "title": "Anodyne",
               "subtitle": "",
-              "footer_link_list": "footer"
+              "footer_link_list": "footer-policies"
             }
           },
           "045bae48-bfff-4e04-a080-14a99dbf2e0c": {
@@ -561,7 +574,7 @@
         "type": "product-recommendations",
         "settings": {
           "show_product_recommendations": true,
-          "title": "Recommended for you",
+          "title": "",
           "subtitle": "",
           "section_style": "section-blank",
           "rows": "2",
@@ -655,7 +668,7 @@
               "title": "Gratis verzending",
               "description": "Op alle producten",
               "icon": "shopify:\/\/shop_images\/Truck_100px.png",
-              "uspLinkUrl": ""
+              "uspLinkUrl": "shopify:\/\/pages\/verzending-en-levering"
             }
           },
           "1630063768bdfa2f5f-1": {
@@ -699,11 +712,11 @@
       "1630070175c6ebb320": {
         "type": "featured-collections",
         "blocks": {
-          "1630070175c6ebb320-0": {
+          "1630070175c6ebb320-2": {
             "type": "collection",
             "settings": {
-              "collection": "andere-producten",
-              "btn__shopnow": "Shop"
+              "collection": "posture-shirt",
+              "btn__shopnow": "shop"
             }
           },
           "1630070175c6ebb320-1": {
@@ -713,18 +726,18 @@
               "btn__shopnow": "shop"
             }
           },
-          "1630070175c6ebb320-2": {
+          "1630070175c6ebb320-0": {
             "type": "collection",
             "settings": {
-              "collection": "posture-shirt",
-              "btn__shopnow": "shop"
+              "collection": "andere-producten",
+              "btn__shopnow": "Shop"
             }
           }
         },
         "block_order": [
-          "1630070175c6ebb320-0",
+          "1630070175c6ebb320-2",
           "1630070175c6ebb320-1",
-          "1630070175c6ebb320-2"
+          "1630070175c6ebb320-0"
         ],
         "settings": {
           "show_on_desktop": true,
@@ -987,10 +1000,10 @@
       "collection-template": {
         "type": "collection-template",
         "settings": {
-          "collection_tags_enable": true,
-          "collection_tags_count": true,
-          "collection_multiple_tags_filtering_enable": true,
-          "collection_sort_enable": true,
+          "collection_tags_enable": false,
+          "collection_tags_count": false,
+          "collection_multiple_tags_filtering_enable": false,
+          "collection_sort_enable": false,
           "tag_selector": "button",
           "rows": "4",
           "desktop_grid": "4",

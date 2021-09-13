@@ -1018,6 +1018,7 @@ $large: $postMedium;
 
 // Site width
 $siteWidth: {{ settings.page_wrapper }}px;
+$siteWidthMedium: 1048px;
 
 // Boxed
 $boxedWidth: 66.666%;
@@ -1318,8 +1319,7 @@ $class-type: unquote(".");
 
 // Sub
 @mixin textSub {
-  text-transform: uppercase;
-  font-size: $baseFontSize-sm;
+  font-size:14px ;
   font-weight: 700;
 }
 
@@ -1615,6 +1615,7 @@ $class-type: unquote(".");
   label {
     &::after {
       content: "radio_button_unchecked";
+      color: lighten($colorLightGray, 10%);
     }
   }
 }
@@ -1856,7 +1857,7 @@ $class-type: unquote(".");
 
   // Buttons
   .btn--primary { @include button($primary, $buttonText) }
-  .btn-outline-primary { @include button($primary, $buttonText, outline) }
+  .btn-outline-primary { @include button(lighten($colorPrimary, 24%), $black) }
 
   // Badge
   .badge {
@@ -2589,6 +2590,9 @@ a {
 }
 .now__islink{
 color: $colorDarkGray;
+&:hover .card{
+  background-color: lighten($colorPrimary, 29%);
+}
 }
 /*================ _Form ================*/
 .form-vertical {
@@ -2949,7 +2953,7 @@ button {
 }
 
 .btn-outline-primary {
-  @include button(lighten($colorPrimary, 24%), $colorButtonText, outline);
+ @include button(lighten($colorPrimary, 24%), $black);
 }
 
 .btn-reveal-primary {
@@ -3269,9 +3273,8 @@ button {
 /*================ _Badges ================*/
 .badge {
   @include textSub;
-  color: $colorBody;
+  color: lighten($colorDarkGray, 15%);
   border-radius: $borderRadius;
-  background-color: $colorAccent;
   padding:4px 5px;
   white-space: nowrap;
   vertical-align: baseline;
@@ -3481,6 +3484,7 @@ button {
   border: $bordersLight;
   background-color: $colorDefault;
   border-radius: $borderRadius;
+  transition: transition($transitions);
   @include display-flexbox;
   @include flex-direction(column);
   width: 100%;
@@ -4868,6 +4872,7 @@ cite {
   // Small
   .grid-small > & {
     padding-left: $gutter-sm;
+    padding-right: $gutter-sm;
   }
 
   // Xsmall
@@ -4980,13 +4985,16 @@ cite {
 /*================ _Section_header ================*/
 .section__mission{
   margin-top: $gutter-sm;
+  .mission__grid{
+    margin-bottom: -($gutter-lg + $gutter-sm);
+  }
   .section-mission__title{
     text-transform: uppercase;
-    margin-bottom: $gutter;
+    margin-bottom: $gutter-sm;
   }
   .section-mission__description{
-    font-size: $baseFontSize-lg;
-    line-height:1.8;
+    font-size: ($baseFontSize - 1);
+    line-height:1.5;
     margin-bottom: $gutter;
   }
   .btn-mission{
@@ -5083,6 +5091,9 @@ cite {
 /*================ _Wrapper ================*/
 .wrapper {
   @include makeWrapper($siteWidth);
+}
+.wrapper-small{
+  @include makeWrapper($siteWidthMedium);
 }
 
 .wrapper-fluid {
@@ -7113,9 +7124,10 @@ body {
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
-.text-money {@include accentFontStack; font-size: 1.1rem;}
+.text-money {@include accentFontStack; font-size: 0.89rem; font-weight: 700; color: $colorAccent}
+.product__money-text {@include accentFontStack; font-size: 1.500rem; font-weight: 500; color: $colorAccent}
 .text-sub {@include textSub}
-.text-strike {text-decoration: line-through!important}
+.text-strike {text-decoration: line-through!important; text-decoration-color: $colorAccent !important}
 .text-capitalize {text-transform: capitalize}
 .text-muted {color: mix($colorBody, $colorBodyText, $opacity * 100)}
 .text-italic {font-style: italic}
@@ -9075,6 +9087,9 @@ body:not(.dbtfy-wish_list-destroy) {
       @include button($colorFooterPrimary, $colorFooterButtonText);
     }
     .main-footer{
+      @include screen($small){
+        text-align:center;
+      }
       .site-footer__socials{
         a {
           display: block;
@@ -9632,79 +9647,33 @@ selector[data-type="languages"][data-id="283692853"].ls-sw-closed > .active:afte
   transform: rotate(135deg)!important;
 }
 
-.qty-container {
-.qb-product_breaks {
-  .radio {
-    .badge {
-      display: none;
+
+.recommendation-title-wrapper{
+  margin-bottom: -($gutter );
+  .recommendation-header__title{
+    font-size:1.4rem;
+    text-transform:uppercase;
+    margin-bottom: -($gutter-xs );
+  }
+}
+.guarantee-section{
+  .guarantee-item{
+    padding:$gutter-xs;
+    @include screenUp($postSmall){
+      padding:$gutter;
     }
-  }
-
-  .radio:nth-of-type(2)::after{
-    content: 'BESPAAR 10%';
-    color: white;
-    background-color:  $colorAccent;
-    padding: 2px 4px;
-
-  }
-  .radio:nth-of-type(3)::after{
-    content: 'BESPAAR 20%';
-    color: white;
-    background-color:  $colorAccent;
-    padding: 2px 4px;
-  }
-
-}
-}
-
-
-  // cradio
-  .cs-product_breaks {
-   margin:-($gutter-sm) 0 $gutter-sm 0;
-   padding: $gutter-sm;
-   border: 1px solid darken($white, 5%);
-   background-color: darken($white, 3%);
-    .csradio-container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      label {
-        margin-left: 6px;
-        font-family: inherit;
-        font-size:1rem;
-        font-weight:500;
+    .guarantee-text {
+      p{
+        font-size:.89rem;
       }
-      input[type='radio']:after {
-        width: 24px;
-        height: 24px;
-        border-radius: 24px;
-        top: -5px;
-        left: -1px;
-        position: relative;
-        background-color: darken($white, 4%);
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid darken($white, 12%);
-    }
-
-    input[type='radio']:checked:after {
-        width: 24px;
-        height: 24px;
-        border-radius: 24px;
-        top: -5px;
-        left: -1px;
-        position: relative;
-        background-color: $colorPrimary;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid darken($white, 12%);
-    }
-
     }
   }
-
+}
+.in-center{
+  display: block;
+  text-align: center!important;
+  margin-bottom: $gutter;
+}
 
 
 {%- if settings.custom_style != blank -%}

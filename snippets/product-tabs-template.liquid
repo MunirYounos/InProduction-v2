@@ -323,7 +323,7 @@
               <meta itemprop="inventoryLevel" content="{{ current_variant.inventory_quantity }}">
               {%- endif -%}
 
-              <div class="price-container text-money text-large spacer-bottom flex align-center{% if current_variant.unit_price_measurement %} price-container--unit-available{% endif %}" data-price-container>
+              <div class="price-container text-money product__money-text text-large spacer-bottom flex align-center{% if current_variant.unit_price_measurement %} price-container--unit-available{% endif %}" data-price-container>
                 <span id="ProductPrice"
                   class="product-single__price{% if on_sale %} on-sale text-sale{% endif %}"
                   itemprop="price"
@@ -333,13 +333,13 @@
                   {% else %}
                   aria-label="{{ 'products.general.regular_price' | t }}"
                   {% endif %}>
-                  <span class="money">{{ price | money }}</span>
+                  <span class="money product__money">{{ price | money }}</span>
                 </span>
 
                 <span id="ComparePrice"
                   class="product-single__price--compare-at text-muted text-strike{% unless on_sale %} hide{% endunless %}"
                   aria-label="{{ 'products.general.regular_price' | t }}">
-                  <span class="money">{{ compare_at_price | money }}</span>
+                  <span class="money product__money">{{ compare_at_price | money }}</span>
                 </span>
 
                 {%- render "dbtfy-discount-saved" with product as product -%}
@@ -361,7 +361,7 @@
                   {%- endcapture -%}
                   <span class="product-unit-price">
                     <span class="visually-hidden">{{ 'products.general.unit_price' | t }}</span>
-                    <span data-unit-price><span class="money"></span>{{ current_variant.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
+                    <span data-unit-price><span class="money product__money"></span>{{ current_variant.unit_price | money }}</span>{{- unit_price_separator -}}{{- unit_price_base_unit -}}
                   </span>
                 </div>
               </div>
@@ -527,24 +527,29 @@
                     {%- assign hide_quantity_box = false -%}
                   {%- endif -%}
 
-
-             
-
-
-                  {%- if section.settings.quantity_enabled or settings.custom_quantity_breaks  -%}
+                  {%- if section.settings.quantity_enabled and settings.custom_quantity_breaks  -%}
                     <div class="product-single__quantity spacer-bottom" {%- if hide_quantity_box -%}hidden{%- endif -%}>
                           {%- assign quantity_id = 'product-' | append: product.id -%}
 
-                          {%- if section.settings.quantity_enabled or settings.custom_quantity_breaks -%}
-                            <label class="inline-label" for="{{ quantity_id }}" {% if section.settings.quantity_enabled == false and settings.custom_quantity_breaks %}hidden {% endif %}>{{ 'products.product.quantity' | t }}</label>
+                          {%- if section.settings.quantity_enabled and settings.custom_quantity_breaks -%}
+                            <label class="inline-label" for="{{ quantity_id }}" {% if section.settings.quantity_enabled == false and settings.custom_quantity_breaks %}hidden {% endif %}>{{ 'products.product.quantity' | t }}</label><br>
+
+
+                            {% if collection.handle == "posture-shirt" or product.handle contains "womens-posture-shirt" or product.handle contains "mens-posture-shirt" %}
+                            {%- render "posture-shirt-radios" -%}
+                   
+                            {%- endif -%}
+
+
                           {%- endif -%}
 
                           {%- render "dbtfy-inventory-quantity", product: product -%}
 
                           {%- if section.settings.quantity_enabled -%}
-                               {% if collection.handle == "posture-shirt" %}
+                               {% if collection.handle == "posture-shirt" or product.handle contains "womens-posture-shirt" or product.handle contains "mens-posture-shirt" %}
                                     {%- assign hide_quantity_box = false -%}
                                 {%- else -%}
+
                                 {%- render "quantity-selector", type: "product", id: quantity_id -%}
                             {%- endif -%}
                           {%- elsif settings.custom_quantity_breaks -%}
@@ -552,11 +557,8 @@
                        {%- endif -%}
                     </div>
                   {%- endif -%}
-                      <!-- custom quantity breaks -->
-                      {% if collection.handle == "posture-shirt" %}
-                      {%- assign hide_quantity_box = false -%}
-                      {%- render "posture-shirt-radios" -%}
-                      {%- endif -%}
+        
+     
 									<!-- size-chart -->
 									{%- if show_sizeGuide == true -%}
 									<div class="custom_size_chart">

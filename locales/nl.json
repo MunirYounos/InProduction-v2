@@ -79,6 +79,9 @@
     },
     "localization": {
       "submit_label": "Update voorkeuren"
+    },
+    "locales": {
+      "locale": "Aanbevolen voor jou"
     }
   },
   "blogs": {
@@ -324,11 +327,15 @@
     },
     "tabs": {
       "tab-description": " Beschrijving ",
-      "tab-medical" : " Medisch geregistreerd ",
-      "tab-use" : " Gebruik ",
-      "tab-manual" : " Gebruiksaanwijzing ",
-      "tab-material" : "  Materiaal ",
-      "tab-delivery" : "  Levering & Retourneren "
+      "tab-medical": " Medisch geregistreerd ",
+      "tab-use": " Gebruik ",
+      "tab-manual": " Gebruiksaanwijzing ",
+      "tab-material": "  Materiaal ",
+      "tab-delivery": "  Levering & Retourneren "
+    },
+    "radios": {
+      "radio-one": "Koop",
+      "radio-save-amount": "Bespaar"
     }
   },
   "gift_cards": {
