@@ -321,6 +321,18 @@
       "next": "Næste (tasten pil til højre)",
       "prev": "Forrige (tasten pil til venstre)",
       "close": "Luk (esc)"
+    },
+    "tabs": {
+      "tab-description": " Beskrivelse ",
+      "tab-medical": " Medicinsk registreret ",
+      "tab-use": " Gebruik ",
+      "tab-manual": "Anvendelse",
+      "tab-material": "  Materiale ",
+      "tab-delivery": " Levering & retur "
+    },
+    "radios": {
+      "radio-one": "Købe ",
+      "radio-save-amount": "Spare"
     }
   },
   "gift_cards": {
