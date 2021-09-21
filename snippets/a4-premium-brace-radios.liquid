@@ -1,7 +1,6 @@
   <!-- custom input radio buttons -->
 
 	<div class="radio  product-single__form product-form__item">
-	
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 		{% if option.selected_value == value %} checked="checked"{% endif %} id="Quantity-1" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
 
@@ -9,8 +8,7 @@
 			<span class="qb-radio text-money">
 				<span class="qb-discounted-price on-sale text-sale">
 				<span class="money">
-					€79,00
-
+					€59,00
 		</span></span></span></label>
 		</div>
 
@@ -18,18 +16,16 @@
 
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 	id="Quantity-2" name="quantity" value="2" min="2" class="product-form__input" pattern="[0-9]*">
-
 		<label for="Quantity-2">{{ 'products.radios.radio-one' | t }} 2: 
 			<span class="qb-radio text-money">
 				<span class="qb-discounted-price on-sale text-sale">
 					<span class="money">
-						€148,00
+						€89,00
 					</span>
 				</span>
-
 				<span class="qb-original-price text-strike text-muted">
 					<span class="money">
-						€158,00
+						€118,00
 					</span>
 				</span>
 				<span class="badge qb-saved-amount">
@@ -37,34 +33,26 @@
 				</span>
 			</span>
 		</label>
-
 	</div>
-
 		<div class="radio product-single__form product-form__item">
 		<input type="radio" class="single-option-selector-{{ section.id }} "
 		id="Quantity-3" name="quantity" value="3" min="3" class="product-form__input" pattern="[0-9]*">
-
 		<label for="Quantity-3">{{ 'products.radios.radio-one' | t }} 3: 
 			<span class="qb-radio text-money">
 				<span class="qb-discounted-price on-sale text-sale">
 					<span class="money">
-						€225,00
+						€141,00
 					</span>
 				</span>
-
 				<span class="qb-original-price text-strike text-muted">
 					<span class="money">
-						€237,00
+						€177,00
 					</span>
 				</span>
 				<span class="badge qb-saved-amount">
 					{{ 'products.radios.radio-save-amount' | t }} <span class="money">20%</span>
 				</span>
 			</span>
-		
-
 		</label>
 	</div>
-
-
 <!-- end of custom radio buttons -->

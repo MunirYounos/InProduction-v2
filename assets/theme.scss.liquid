@@ -2090,7 +2090,7 @@ $class-type: unquote(".");
   left: 0;
   top: 0;
   display: block;
-
+  padding: $gutter-xs 0;
   @include transform(translate3d(0, 0, 0));
 
   &::before,
@@ -9422,7 +9422,7 @@ body:not(.dbtfy-wish_list-destroy) {
     padding: 0;
     background-color: darken($white, 1%);
     @include screenUp($postSmall){
-      margin-left: -$gutter;
+      margin-left: -$gutter-sm;
     }
     .accordion__title{
       padding: ($gutter-sm + 6)  $gutter-sm ($gutter-sm + 6) $gutter-xs;

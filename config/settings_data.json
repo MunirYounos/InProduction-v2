@@ -13,6 +13,7 @@
     "collection_grid_button_style": "",
     "word_count": 33,
     "show_currency_selector": false,
+    "localization_position": "header",
     "section_height": "small",
     "section_height_mobile": "small",
     "border_radius": 1,
@@ -403,7 +404,7 @@
               "logo_width": 150,
               "title": "Contact",
               "subtitle": "",
-              "text": "<p>Anodyne.nl<\/p><p>Ma. - do: 10:00 - 16:00<br\/>Vrijdag: 10:00 - 15:00<\/p>",
+              "text": "<p>Anodyne.be<\/p><p>Ma. - do: 10:00 - 16:00<br\/>Vrijdag: 10:00 - 15:00<\/p>",
               "email": true,
               "phone": true
             }
@@ -414,9 +415,9 @@
               "column_width": 1,
               "title": "Socials",
               "subtitle": "",
-              "facebook_link": "https:\/\/www.facebook.com\/anodyne.nl\/",
+              "facebook_link": "https:\/\/www.facebook.com\/anodyne.be\/",
               "youtube_link": "https:\/\/www.youtube.com\/channel\/UCFLDlWEPVUrvsuNjVt6sXJg",
-              "insta_link": "https:\/\/www.instagram.com\/anodyne.nl\/"
+              "insta_link": "https:\/\/www.instagram.com\/anodyne.be\/"
             }
           }
         },
@@ -668,7 +669,7 @@
               "title": "Gratis verzending",
               "description": "Op alle producten",
               "icon": "shopify:\/\/shop_images\/Truck_100px.png",
-              "uspLinkUrl": "shopify:\/\/pages\/verzending-en-levering"
+              "uspLinkUrl": "shopify:\/\/pages\/verzending-en-retour"
             }
           },
           "1630063768bdfa2f5f-1": {
@@ -780,7 +781,7 @@
           "show_on_mobile": true,
           "padding_section": true,
           "section_style": "section-blank",
-          "wrapper_size": ""
+          "wrapper_size": "-small"
         }
       },
       "163032806406e9f003": {
@@ -871,7 +872,7 @@
               "image": "shopify:\/\/shop_images\/Checkmark_100px_6f3ff027-5ec1-4895-8f00-e8935066583a.png",
               "icon": "",
               "title": "De originele houdingcorrigerende kleding",
-              "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"https:\/\/www.anodyne.nl\/\" title=\"https:\/\/www.anodyne.nl\/\">www.anodyne.nl<\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
+              "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"https:\/\/www.anodyne.be\/\" title=\"https:\/\/www.anodyne.be\/\"><span style=\"text-decoration:underline\">www.anodyne.be<\/span><\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
               "button_style": "btn--primary",
               "button_label": "",
               "button_link": ""
@@ -895,7 +896,7 @@
               "image": "shopify:\/\/shop_images\/Kinesio3_100px.png",
               "icon": "",
               "title": "Van kinesiotape tot houdingcorrigerende kleding",
-              "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
+              "text": "<p><a href=\"\/collections\/posture-shirt\" title=\"Posture Shirt™\"><span style=\"text-decoration:underline\">Houdingcorrigerende kleding<\/span> <\/a>activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
               "button_style": "btn--primary",
               "button_label": "",
               "button_link": ""
@@ -922,8 +923,10 @@
           "1630404145a76c9e4d-0": {
             "type": "video",
             "settings": {
-              "video_cover_image": "shopify:\/\/shop_images\/vCover.jpg",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=kTm6zhgq9Mc",
+              "video_cover_image": "shopify:\/\/shop_images\/Video_NL.jpg",
+              "video_cover_image_fr": "shopify:\/\/shop_images\/posture-shirt-video-fr.jpg",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w",
+              "video_url_fr": "https:\/\/www.youtube.com\/watch?v=r3VOvBQz3TE",
               "animated_button": true
             }
           }
@@ -1055,7 +1058,7 @@
             "settings": {
               "card__icon": "shopify:\/\/shop_images\/Customerservice_copy_100px_1.png",
               "title": "Klantenservice",
-              "text": "<p>Neem contact met ons op via telefoon <a href=\"tel:+31 (0) 20-26 22 008\"><strong>+31 (0) 20-26 22 008<\/strong><\/a> of <a href=\"mailto:info@anodyne.nl\" title=\"mailto:info@anodyne.nl\"><strong>info@anodyne.nl<\/strong><\/a> als je vragen hebt over maten, prijzen of iets anders.<\/p>",
+              "text": "<p>Neem contact met ons op via telefoon <a href=\"tel:+31 (0) 20-26 22 008\"><strong>+31 (0) 20-26 22 008<\/strong><\/a> of <a href=\"mailto:info@anodyne.be\" title=\"mailto:info@anodyne.be\"><strong>info@anodyne.be<\/strong><\/a> als je vragen hebt over maten, prijzen of iets anders.<\/p>",
               "card__alignement": "center",
               "text_alignment": "text-center",
               "type_row": "",
@@ -1115,6 +1118,333 @@
         ],
         "settings": {
           "show_product_card": true
+        }
+      },
+      "dbtfy-faq-page": {
+        "type": "dbtfy-faq-page",
+        "blocks": {
+          "0b305f44-574b-4f02-bb8e-e45a0074daea": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Productadvies",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "9377fd71-367b-47af-a161-190cf62e3aff": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Wat is een houdingcorrigerend shirt van Anodyne® en hoe werkt het?",
+              "text": "<p>Houdingcorrigerende kleding van Anodyne® is ontworpen om het spiergeheugen te stimuleren en de houdingsbewustheid te verbeteren. Afhankelijk van het specifieke huidgedeelte zitten er tussen de 20.000 en 80.000 zenuwreceptoren in een vierkante centimeter huid. Deze receptoren zorgen voor gevoel en reacties op aanraking, druk en temperatuur. De zenuwuiteinden sturen signalen naar de hersenen, waardoor gespannen spieren zich ontspannen, terwijl de meer inactieve spieren zich aanspannen. De houdingcorrigerende kleding van Anodyne® draagt bij aan het creëren van een constante stroom informatie die heen en weer loopt tussen de zenuwreceptoren in de huid en de hersenen. Het resultaat is dat de spieren door de hersenen worden gestimuleerd om actief te worden waardoor je zelf je houding gaat verbeteren. Door het activeren van de juiste spieren ga je de verkrampte spieren leren ontspannen. Op deze manier bescherm je kwetsbare spieren, terwijl het prestatievermogen van degene die de kleding draagt wordt vergroot, letsel wordt verminderd en genezing wordt bevorderd. Het is belangrijk om te onderstrepen dat houdingcorrigerende kleding een aanvulling is op training en fysiotherapie en niet een product dat op zichzelf kan worden gebruikt voor het behandelen of voorkomen van letsel.<\/p>"
+            }
+          },
+          "0375225b-0ac9-445e-8105-9d6ad4a7583c": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Wat is het verschil tussen producten van Anodyne® en dat van haar concurrenten?",
+              "text": "<p>Daarnaast zijn er ook verschillende kopie producten op de markt die op de onze lijken, maar geen (of zelfs een klachtenverhogend) effect hebben. Ook zijn er producten die de spierfunctie over kunnen nemen, waardoor het lichaam op termijn zwakker wordt, waar de Anodyne producten spieren juist stimuleert en activeert.<\/p><p><br\/><a href=\"https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfRL\/rl.cfm?lid=446140&lpcd=IQI\" target=\"_blank\">Bekijk hier de FDA registratie<\/a><br\/><a href=\"https:\/\/sw9336.smartweb-static.com\/upload_dir\/blog\/Alignmed---Certificate-of-CE-Registration.pdf\" target=\"_blank\">Bekijk hier de CE-markering<\/a><br\/><a href=\"https:\/\/www.anodyne.be\/wetenschappelijk-onderzoek\/\" target=\"_blank\">Bekijk hier de studies achter onze producten<\/a><br\/><\/p>"
+            }
+          },
+          "5442a247-e1ec-4ce3-bef5-88db002cffe2": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Krijg ik gegarandeerd minder pijn of een betere houding?",
+              "text": "<p>Om het juiste effect te kunnen ervaren is het erg belangrijk dat u het juiste product in de juiste maat bestelt. Voor eventuele vragen over de maat kunt u meer informatie vinden in de FAQ, of contact opnemen met de klantenservice.<\/p><p>Omdat ieder mens verschillend is, kunnen we verder niet garanderen dat houdingcorrigerende producten het gewenste effect op u hebben. Maar een overgrote meerderheid van de mensen die de producten gebruikt, merkt een duidelijke verbetering. Daarom geldt altijd een volledig retourrecht van 60 dagen als u winkelt op Anodyne.be. We hebben een retourpercentage van minder dan 5%, wat overeenkomt met 1 op de 20 gebruikers.<\/p><p><\/p><p>Om de kans op succes te vergroten is het ook noodzakelijk dat u de producten uitsluitend volgens de voorschriften gebruikt. Te frequent gebruik van houdingcorrigerende kleding kan ook bijwerkingen hebben, zoals hoofdpijn, kaakpijn, rugpijn of gevoeligheid van de nek en schouders, maar dat is heel individueel. Het is daarom belangrijk dat u de meegeleverde gebruiksaanwijzing grondig doorleest en bedenkt dat het lichaam rustig moet wennen aan een nieuwe houding, zoals we beschrijven in de vraag \"Hoe kan ik het gebruik van mijn Anodyne® product het best opbouwen?\"<\/p><p>Als u vragen heeft over het gebruik van houdingcorrigerende kleding, kunt u altijd contact opnemen met de Anodyne klantenservice.<\/p>"
+            }
+          },
+          "09b8bf08-8969-466e-9a8b-1641716a7a1a": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe lang gaat mijn Anodyne® product mee?",
+              "text": "<p>De levensduur van uw Anodyne product hangt af van hoe u het verzorgt en hoe vaak en hoe lang u het draagt. Zoals alle andere kleding zal ook deze kleding tekenen van slijtage gaan vertonen, afhankelijk van hoe vaak u de kleding draagt.<\/p><p>De levensduur hangt met name af van of u de kleding NIET IN DE DROGER droogt of op meer dan 30 graden in de wasmachine wast. Voor een zo lang mogelijke levensduur van de producten raden wij handwas aan. Wij raden verder aan om GEEN WASVERZACHTER te gebruiken, omdat dit ten koste gaat van de werking van de NeuroBands®.<\/p>"
+            }
+          },
+          "64f3cdad-ec83-434e-951d-1db6546ee6f2": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Pasvorm",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "ee6e4e8f-b41f-4ca6-a2eb-b28f71370e62": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Welke maat moet ik kiezen?",
+              "text": "<p>Om het gewenste effect te kunnen ervaren is een juiste maat zeer belangrijk. De producten kunnen goed aansluiten aan de voorzijde en tóch te groot zijn omdat de NeuroBands niet nauw op de huid zitten. Een maat kleiner zal dan aan de voorzijde hetzelfde aanvoelen, maar vanwege het beter aansluiten van de NeuroBands op de huid wél het gewenste effect bieden.<\/p><p>Het kan voorkomen dat de maat van uw Anodyne product niet overeenkomt met de maat van andere shirts of bh's die u in uw bezit heeft.<\/p><p>Om zo zeker mogelijk te zijn van de juiste maat, raden wij aan om de maattabellen op de productpagina te raadplegen. Als u tussen twee maten in zit, dient u voor het Posture Shirt® in het algemeen de kleinste maat kiezen. Als u bij InterActive Bra, SpinalQ of MyLign Pro tussen twee maten in zit, moet u in het algemeen de grootste maat kiezen. Bij twijfel kunt u contact met ons opnemen.<br\/><\/p>"
+            }
+          },
+          "fd099d87-5ed8-45db-b484-79381febd04b": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe kan ik zien of ik de juiste maat heb?",
+              "text": "<p>De shirts dienen strak te zitten voor het juiste effect. U kunt alleen bepalen of een shirt te groot of te klein is door te kijken naar de NeuroBands (de speciale banden aan de achterzijde) rond de schouders. De voorzijde is elastisch, en zal altijd nauw op de huid aansluiten, ook bij een te grote maat.<\/p><p>Vertonen de NeuroBands in uw shirt vouwen? Dan raden wij u aan om uw Posture Shirt om te ruilen voor een kleinere maat zodat u het gewenste effect zult kunnen ervaren. Rond de oksels en op andere plaatsen mag het shirt wel (kleine) vouwen vertonen. Indien u twijfelt over de maat,  neem dan gerust contact op met de klantenservice.<\/p>"
+            }
+          },
+          "887515eb-9def-4dc2-909b-76ddb585b625": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Mijn Anodyne® Posture Shirt zit (erg) strak, is het te klein?",
+              "text": "<p>De Posture Shirts van Anodyne dienen strak te zitten voor het juiste effect. Je kunt alleen bepalen of een shirt te groot of te klein is door te kijken naar de speciale banden op de achterzijde rond de schouders. De voorzijde is elastisch, en zal altijd nauw op de huid aansluiten, ook bij een te grote maat. Wanneer de NeuroBands (de speciale banden aan de achterzijde) nauw aansluiten op de huid en je een lichte ”trekwerking” rond de schouders voelt, heb je de juiste maat. De meeste mensen moeten wennen aan een strak shirt, gebruik daarom de 60 dagen proefperiode zodat je goed kunt testen of je aan het shirt kunt wennen.<\/p><p>Kun je het effect goed merken, maar heb je moeite met het aan- en uittrekken van je product? Overweeg dan om je Anodyne® Posture Shirt om te ruilen voor een Posture Shirt Zipper. Het effect van het shirt is hetzelfde, maar door de rits is dit shirt makkelijker om aan en uit te trekken. Neem bij twijfel gerust contact op met de klantenservice. Wanneer u een foto van je rug stuurt terwijl je het shirt aan hebt, kunnen zij direct zien of u de juiste maat draagt.<br\/><\/p>"
+            }
+          },
+          "3fe9b653-4494-4c5f-94fa-735d75fe3361": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Gebruik",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "94a14ee6-ec1c-44eb-bda3-36df48b2fae1": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe kan ik het gebruik van mijn Anodyne® product het beste opbouwen?",
+              "text": "<p>Zoals altijd, is het ook bij het gebruiken van het Posture Shirt® belangrijk dat u naar uw lichaam luistert. Het activeren van spieren om uw houding te verbeteren kan voor spierpijn zorgen; u gaat namelijk andere spieren gebruiken dan degene die we vaak (onbewust) verkrampen. Anodyne raadt u aan om het Posture Shirt de eerste dag ongeveer twee uur te dragen. Mocht u binnen twee uur al vermoeidheid merken, trek het shirt dan uit. Indien u de volgende dag spierpijn ervaart, hou het dan bij een tot twee uur per dag tot dit niet meer het geval is.<\/p><p>Wanneer u geen spierpijn ervaart, kunt u het de volgende dag steeds wat langer dragen. Bijvoorbeeld zowel in de ochtend als in de avond. Omdat u het maar kort gebruikt hoeft het shirt niet steeds de was in. Uiteraard mag het ook op werk en tijdens het sporten gedragen worden; gebruik het Posture Shirt daar waar u het meeste baat heeft bij een verbetering van uw houding. Door het opbouwen van uw spiergeheugen zult u ook op andere momenten profijt hebben van het Posture Shirt.Indien u helemaal niets merkt, kan het zijn dat u een verkeerde maat heeft. Neem in dit geval contact op met de klantenservice, zodat u geholpen kunt worden bij een eventuele omruiling. Wanneer u het gebruik langzaam maar zeker opbouwt, zal het al snel mogelijk zijn om uw houdingcorrigerende product van Anodyne® bijvoorbeeld een hele werkdag te dragen. Wij raden vanaf dat moment aan om uw Anodyne product 3 á 4 keer per week te gebruiken.<\/p>"
+            }
+          },
+          "e6bbc08e-749f-43c3-a082-b4ead9c4ba56": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Zijn er mensen die de Anodyne® producten niet mogen gebruiken?",
+              "text": "<p>Indien u specifieke klachten, ernstige ziektes of fysiologische beperkingen heeft, raden wij altijd aan om eerst een fysiotherapeut te raadplegen. Wij werken in verschillende landen met vele medische specialisten samen, maar mocht uw fysio of andere specialist ons nog niet kennen, laat hem\/of haar dan gerust contact met ons opnemen.<\/p><p>Als u recentelijk bent geopereerd, dient u met een arts of fysiotherapeut bespreken of het nog niet te vroeg is om aan uw lichaamshouding te gaan werken. Bij mobiliteitsproblemen rond de schouders raden wij in ieder geval aan om voor het Posture Shirt Zipper te kiezen, omdat deze veel makkelijker aan en uit te krijgen is.<\/p><p>In het algemeen raden wij ook kinderen en jongeren onder de 17 jaar af om de producten te gebruiken zonder voorafgaand advies van een arts of fysiotherapeut.<\/p>"
+            }
+          },
+          "489e0dba-5416-43ca-a1ad-20e6e35b749f": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe kan ik mijn Anodyne® producten het beste verzorgen?",
+              "text": "<p>De Anodyne® producten kunnen met een handwas worden gewassen, of in de wasmachine op 30 graden. NIET IN DE DROGER drogen! Het shirt droogt na een machine was makkelijk in een nacht wanneer het vrij kan hangen.Het is belangrijk dat bij het wassen van de producten GEEN WASVERZACHTER te gebruiken. Hierdoor zal de rek in de NeuroBands verminderen waardoor het effect van de producten zal verdwijnen.Bij eventuele nare geurtjes door zweet raden wij aan om een sportwasmiddel te gebruiken om de producten te wassen. Het is ook mogelijk om de producten in een azijnbad te laten weken voor het de was ingaat, zodat nare geurtjes tegen kunnen worden gegaan.<\/p>"
+            }
+          },
+          "c906914a-e11e-4155-85c4-420ce65fda17": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Bezorging",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "57c7a813-95aa-4a4a-929e-cfa6ab706cb4": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Ik heb mijn pakje (nog) niet ontvangen. Wat nu?",
+              "text": "<p>De bezorging via bpost bevat een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via bpost duurt de levering tussen de 1 en 3 werkdagen.<\/p><p>Het kan zijn dat bpost u een e-mail heeft gestuurd met het bericht dat uw pakje al af te halen is, maar dat het in de ongewenste post terecht is gekomen. Indien u vragen heeft over de levering van uw bestelling, wacht dan niet en neem contact op met onze klantenservice.<br\/><\/p>"
+            }
+          },
+          "7c7a712f-ead4-4908-aab0-b22a712000c1": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe lang duurt de levering?",
+              "text": "<p>De bezorging via bpost bevat een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via bpost duurt de levering tussen de 2 en 4 werkdagen.<\/p><p>Anodyne doet er alles aan om binnen de beloofde levertijd te bezorgen. Uiteraard houden wij u per e-mail op de hoogte over de voortgang van uw bestelling. Ook nemen wij, indien mogelijk, contact met u op indien er zich bijzonderheden voordoen die de levertijd van je bestelling beïnvloeden. Hierin zijn wij afhankelijk van informatie die wij van onze vervoerders ontvangen.<\/p><p>Helaas duurt het op piekmomenten zoals tijdens een sale of rond feestdagen en in andere uitzonderlijke gevallen wel eens wat langer. Mocht dit het geval zijn, dan kunt u van ons verwachten dat we er alles aan doen om uw bestelling zo snel mogelijk bij u thuis te krijgen. Indien u vragen of opmerkingen heeft, neem dan gerust contact op met de Anodyne klantenservice.<br\/><\/p>"
+            }
+          },
+          "fe3da385-8b3b-444b-bb33-8f0c416d4561": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Bestelling & Betaling",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "ab020fcb-0978-4eb6-90e7-84aaae88495e": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe kan ik mijn bestelling bij Anodyne® betalen?",
+              "text": "<p>Wij bieden verschillende betaalmogelijkheden aan, die je kunt kiezen bij het afronden van je bestelling.<br\/><br\/><strong>PayPal<\/strong><br\/>Met PayPal bieden wij een online betalingsmethode waarbij je e-mailadres is gekoppeld aan uw bankrekening. U logt simpel in, in het betaalscherm en rond de betaling af. Anodyne kan hierdoor direct de order klaarmaken voor verzending. Betalingen via PayPal worden vanuit PayPal verzekerd.<br\/><br\/><strong>Creditcard<\/strong><br\/>Nederlandse en Belgische creditcards van Visa en Mastercard zijn bij ons meer dan welkom. Zodra de bestelling is geplaatst ontvangt u een bevestigingsmail en versturen wij de bestelling zo snel mogelijk op. Het bedrag wordt pas na verzending afgeschreven.<br\/>Waarom kiezen voor betalen met creditcard? Geen bijkomende kosten bij betaling met creditcard; Uw gegevens worden beveiligd verstuurd; Het bedrag wordt pas na verzending afgeschreven. Uw betalingen zijn via uw bank verzekerd.<\/p>"
+            }
+          },
+          "5d3fa7a0-856f-4796-a226-ffd708759b98": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Kan ik mijn bestelling nog wijzigen?",
+              "text": "<p>In bepaalde gevallen is het na het plaatsen van je bestelling nog mogelijk om bepaalde wijzigingen aan te brengen. Wij raden je dan ook aan om zo snel mogelijk contact met ons op te nemen. Wij kunnen u telefonisch vertellen of het nog mogelijk is de gewenste wijziging aan te brengen. Onze klantenservice is van maandag tot en met donderdag van 11:00 tot 16:00 bereikbaar. Op vrijdagen van 11:00 tot 15:30. Indien je bestelling nog niet is verzonden is het hoogstwaarschijnlijk mogelijk om deze nog te wijzigen en\/of annuleren.<\/p>"
+            }
+          },
+          "2babc3c1-8e24-41fe-a87b-c881054a6272": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Kan ik mijn gemaakte bestelling nog annuleren?",
+              "text": "<p>Indien uw bestelling nog niet is verzonden, kunt u contact opnemen met de klantenservice, die u hierbij graag helpen. Als uw pakje al is verzonden kunt u deze retourneren. Zodra wij het pakje in ons magazijn retour ontvangen, verwerken wij deze zo snel mogelijk. Ook wanneer u het pakje direct retourneert willen wij u verzoeken om contact met onze klantenservice op te nemen. Als wij weten dat het pakje op weg naar ons magazijn is voor een retour, kunnen wij deze sneller behandelen.<\/p>"
+            }
+          },
+          "bb0be18a-5fe2-405c-b206-35f4bda2b733": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Ik heb een verkeerd product ontvangen. Wat nu?",
+              "text": "<p>Binnen Anodyne® doen wij ons best om de bestelling zo goed mogelijk te verwerken. Mocht er aan onze zijde toch een fout zijn gemaakt en u heeft een verkeerd product ontvangen, neem dan zo snel mogelijk contact op met de klantenservice. Zij zullen u dan zo snel en zo goed mogelijk proberen te helpen.<\/p>"
+            }
+          },
+          "e129c782-f3e7-4745-934d-ba95dfbca016": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "(Hoe lang) Heb ik garantie op mijn Anodyne® producten?",
+              "text": "<p>De wettelijke garantie houdt in dat een product datgene is of moet doen wat je er als consument in alle redelijkheid van mag verwachten. Hiervoor staat geen garantietermijn in Nederland. Bij normaal gebruik en bij het volgen van de wasinstructies (Zie \"Hoe verzorg ik mijn Anodyne producten?\") zouden de Anodyne producten minimaal twee jaar mee moeten gaan. Indien het product niet deugt, heeft u recht op gratis reparatie, een nieuw product of teruggave van uw aankoopbedrag.<\/p><p>Is het probleem met het product uw eigen schuld? Dan heeft u geen recht op gratis reparatie, een nieuw product of teruggave van uw geld. Bijvoorbeeld wanneer u uw shirt wast met wasverzachter of in de droogtrommel droogt. Heeft u het product normaal gebruikt maar is het gewoon versleten? Ook dan heeft u geen recht op gratis reparatie. Ook als u bijvoorbeeld een te grote maat besteld heeft en hier pas na de proefperiode van 60 dagen achter komt, heeft u geen recht op gratis omruiling.<\/p>"
+            }
+          },
+          "0af6b5a3-fe94-48b2-a81a-1601a8538a2b": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Omruilen en gebruik",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "52bbac9b-4258-49c4-9865-952944f88632": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Wat houdt Anodyne's 30 dagen proefperiode precies in?",
+              "text": "<p>30 dagen proberen betekent bij Anodyne® letterlijk 30 dagen de mogelijkheid om zelf uw gekozen product te testen.<\/p><p>Bij Anodyne® krijgt u 30 dagen om zelf uw Posture Shirt of AlignMe InterActive Bra te testen. Met testen bedoelen wij het ervaren of u het product zult gaan gebruiken; vind u het lekker zitten, blijft het goed zitten tijdens het werken en\/of sporten, geneert het niet, etc.<\/p><p>Anodyne® vindt dat iemand dit alleen kunt testen wanneer het shirt écht gedragen kan worden. Daarom mag het labeltje er af worden gehaald, u mag met het shirt sporten, het mag gedragen worden tijdens het werken, het mag de was in, etc.<\/p><p>Indien u om wat voor reden dan ook niet tevreden bent met uw Anodyne® product, kunt u het binnen 30 dagen na ontvangst gratis retourneren met de meegeleverde retourlabel. Indien u het product wilt omruilen voor een ander product of maat, krijgt u uiteraard opnieuw 30 dagen de tijd om het te testen. Wanneer u de bestelling binnen 30 dagen na ontvangst retourneert krijgt u het volledige aankoopbedrag terug, ook als het gebruikt is zoals hierboven beschreven!<\/p><p>Het product dient in goede staat worden geretourneerd aan Anodyne®, zonder een sterke geur van bijvoorbeeld parfum of rook, met de bijbehorende originele verpakking en alle waslabels intact en de productlabels bijgevoegd. U mag het product binnen de periode van 30 dagen met retourrecht dragen en wassen met een wasmiddel zonder parfum of wasverzachter, maar als het product op enig moment in de wasdroger is gedroogd of met wasverzachter is gewassen voordat het wordt geretourneerd, kunnen wij weigeren het betaalde bedrag terug te betalen omdat het product hierdoor beschadigd raakt.<\/p>"
+            }
+          },
+          "69da553c-79eb-4b40-b57f-d1cab57f36b4": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Kan ik mijn bestelde product(en) omruilen?",
+              "text": "<p>Ja, indien u nog in uw proefperiode van 30 dagen na ontvangst zit. U kunt op het retourformulier invullen dat u een andere maat of ander product wilt, waarna wij dit zo snel mogelijk verwerken nadat wij het pakje terug hebben gekregen. Lees onder \"Hoe kan ik mijn bestelling retourneren\" hoe u uw bestelling het beste kunt terugsturen. Uiteraard krijgt u opnieuw 30 dagen om uw nieuwe product te proberen.<br\/><br\/>Het is ook mogelijk om de order te retourneren en in de tussentijd een nieuwe order te maken op de website. Op deze manier hoeft u niet eerst te wachten tot wij de order retour hebben ontvangen.<br\/><\/p>"
+            }
+          },
+          "0ccbee6e-6053-4e8e-821f-a37d78cc83e8": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Mag ik mijn artikelen retourneren?",
+              "text": "<p>Vanaf het moment van ontvangst heeft u 30 dagen volledig retourrecht. Zo lang u binnen deze 30 dagen zit, mag u gebruik maken van de meegeleverde retourlabel voor gratis retour. Lees voor meer informatie onder de vraag \"Wat houdt de 30 dagen proefperiode precies in?\".<\/p>"
+            }
+          },
+          "68088497-023b-4bf6-b261-6fe63f13eb87": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Moet ik betalen wanneer ik iets wil omruilen?",
+              "text": "<p>Indien u een product in dezelfde prijsklasse bestelt, hoeft u niets extra’s te betalen. Ook hoeft u geen retourkosten te betalen. Indien u een duurder product wilt bestellen is het beter om de order te annuleren zodat u uw aankoopbedrag terug krijgt, en een nieuwe order te plaatsen.<br\/><\/p>"
+            }
+          },
+          "10a94e6f-3dbd-42fd-aa32-e372ed25ebe7": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe kan ik mijn bestelling omruilen of retourneren?",
+              "text": "<p>In het door jou ontvangen pakketje zit altijd een retourformulier met retourlabel. Vul het retourformulier in (wil je jouw item omruilen - zo ja, voor wat? of liever retourneren?) en maak het pakketje klaar. <\/p><p>Indien je bij het bestellen hebt gekozen voor thuislevering of een afhaalpunt via bpost: Gebruik het label en lever de doos in bij een bpost punt naar keuze.<\/p>"
+            }
+          },
+          "c1a1fdb0-0ab9-44b8-afc9-bd90ba42272c": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Moet ik retourkosten betalen bij Anodyne®?",
+              "text": "<p>Nee. Wanneer u gebruik maakt van de meegeleverde retourlabel en het pakje bij een bpost punt inlevert is de retour volledig gratis. Indien u uw op een andere manier of via een andere leverancier wilt retourneren, zijn de kosten voor uzelf. Wij raden u daarom aan om gebruik te maken van de retourlabel en deze in te leveren bij een bpost punt naar keuze.<\/p>"
+            }
+          },
+          "08e5d2d0-8944-4544-8a9f-f7d497a1bed3": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Mijn nieuw ontvangen product is beschadigd of kapot. Wat nu?",
+              "text": "<p>Binnen Anodyne® doen wij ons best om ervoor te zorgen dat alle producten in goede staat worden geleverd. Een fabrieksfout kan echter altijd gebeuren. Mocht u een beschadigd of kapot product ontvangen, neem dan zo snel mogelijk, maar binnen de 30 dagen proefperiode, contact op met de klantenservice. Zij zullen u dan zo snel en zo goed mogelijk proberen te helpen.<\/p>"
+            }
+          },
+          "27c61a4d-34d9-42eb-8e72-8e44932c286b": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Hoe snel heb ik mijn aankoopbedrag terug?",
+              "text": "<p>Wij ontvangen uw pakje normaal gesproken na 2-4 werkdagen retour in ons magazijn. Wij proberen de binnen gekomen pakjes nog op dezelfde werkdag te verwerken. Bij drukte kan dit twee tot vier werkdagen duren. Zodra wij de order hebben verwerkt, krediteren wij direct het volledige aankoopbedrag. Hoe lang het duurt voordat u dit bedrag terug heeft, is afhankelijk van de door u gebruikte betaalmethode:<\/p><p>Wanneer u via PayPal heeft betaald wordt bij een retour het aankoopbedrag via hetzelfde betaalsysteem teruggestort. Dit kan 1 á 2 werkdagen duren.<\/p><p>Wanneer u via CreditCard heeft besteld, is het afhankelijk van uw creditcardmaatschappij en uw bank wanneer u uw aankoopbedrag terug heeft op uw rekening. Bij een VISA-creditcard duurt het 2-3 werkdagen voordat onze betaling is verwerkt en terug te zien is op uw rekening. Mastercard verwerkt alle betalingen eenmalig per maand. Het kan hierdoor tot 30 dagen duren voordat het bedrag op uw rekening wordt teruggestort. Let erop dat u de rekening controleert die aan uw creditcard is gekoppeld.<br\/><\/p>"
+            }
+          },
+          "f076f8c6-c1e1-4368-b2a7-940a7c08102e": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Ik heb een Anodyne® product cadeau gekregen. Kan ik het aankoopbedrag op mijn eigen rekening teruggestort krijgen?",
+              "text": "<p>Het is voor ons helaas niet mogelijk om het aankoopbedrag naar een andere rekening over te maken. Als er via PayPal betaald is, wordt het bedrag naar het gebruikte bankrekening teruggestort. Bij betaling met een CreditCard wordt het aankoopbedrag naar de gebruikte kaart gecrediteerd.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "0b305f44-574b-4f02-bb8e-e45a0074daea",
+          "9377fd71-367b-47af-a161-190cf62e3aff",
+          "0375225b-0ac9-445e-8105-9d6ad4a7583c",
+          "5442a247-e1ec-4ce3-bef5-88db002cffe2",
+          "09b8bf08-8969-466e-9a8b-1641716a7a1a",
+          "64f3cdad-ec83-434e-951d-1db6546ee6f2",
+          "ee6e4e8f-b41f-4ca6-a2eb-b28f71370e62",
+          "fd099d87-5ed8-45db-b484-79381febd04b",
+          "887515eb-9def-4dc2-909b-76ddb585b625",
+          "3fe9b653-4494-4c5f-94fa-735d75fe3361",
+          "94a14ee6-ec1c-44eb-bda3-36df48b2fae1",
+          "e6bbc08e-749f-43c3-a082-b4ead9c4ba56",
+          "489e0dba-5416-43ca-a1ad-20e6e35b749f",
+          "c906914a-e11e-4155-85c4-420ce65fda17",
+          "57c7a813-95aa-4a4a-929e-cfa6ab706cb4",
+          "7c7a712f-ead4-4908-aab0-b22a712000c1",
+          "fe3da385-8b3b-444b-bb33-8f0c416d4561",
+          "ab020fcb-0978-4eb6-90e7-84aaae88495e",
+          "5d3fa7a0-856f-4796-a226-ffd708759b98",
+          "2babc3c1-8e24-41fe-a87b-c881054a6272",
+          "bb0be18a-5fe2-405c-b206-35f4bda2b733",
+          "e129c782-f3e7-4745-934d-ba95dfbca016",
+          "0af6b5a3-fe94-48b2-a81a-1601a8538a2b",
+          "52bbac9b-4258-49c4-9865-952944f88632",
+          "69da553c-79eb-4b40-b57f-d1cab57f36b4",
+          "0ccbee6e-6053-4e8e-821f-a37d78cc83e8",
+          "68088497-023b-4bf6-b261-6fe63f13eb87",
+          "10a94e6f-3dbd-42fd-aa32-e372ed25ebe7",
+          "c1a1fdb0-0ab9-44b8-afc9-bd90ba42272c",
+          "08e5d2d0-8944-4544-8a9f-f7d497a1bed3",
+          "27c61a4d-34d9-42eb-8e72-8e44932c286b",
+          "f076f8c6-c1e1-4368-b2a7-940a7c08102e"
+        ],
+        "settings": {
+          "show_on_desktop": true,
+          "show_on_mobile": true,
+          "dbtfy_faq_searchbox": false,
+          "dbtfy_faq_search_placeholder": "Search questions...",
+          "dbtfy_faq_bannerbox": true,
+          "dbtfy_faq_banner_icon": "live_help",
+          "dbtfy_faq_banner_text": "Je vraag niet kunnen vinden?",
+          "dbtfy_faq_banner_subtitle": "Onze klantenservice helpt je graag verder!",
+          "dbtfy_faq_btn": "Neem contact op",
+          "dbtfy_faq_link": "shopify:\/\/pages\/contact"
         }
       }
     },
