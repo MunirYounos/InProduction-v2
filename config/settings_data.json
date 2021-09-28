@@ -274,10 +274,10 @@
         ],
         "settings": {
           "show_announcement": true,
-          "show_social": true,
+          "show_social": false,
           "email": true,
           "phone": true,
-          "left_message": "<p>Volg ons!<\/p>",
+          "left_message": "",
           "right_message": "<p><a href=\"\/pages\/contact\" target=\"_blank\" title=\"Contact\">Contact<\/a><\/p>",
           "announcement_autoplayspeed": 5
         }
@@ -319,6 +319,7 @@
           "guarantee-0": {
             "type": "text",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Returns_100px_100x100_d0d9b30d-120c-4c99-9032-c8d2c6a2911d.png",
               "guarantee_icon": "loyalty",
               "title": "",
               "text": "<p>Gratis retourneren en ruilen<\/p>",
@@ -330,6 +331,7 @@
           "guarantee-1": {
             "type": "text",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Truck_100px_100x100_c919ce60-9703-4514-ae13-bf20c54e89af.png",
               "guarantee_icon": "loyalty",
               "title": "",
               "text": "<p>Gratis verzending<\/p>",
@@ -341,6 +343,7 @@
           "guarantee-2": {
             "type": "text",
             "settings": {
+              "image": "shopify:\/\/shop_images\/Smile2_100px_100x100_745611a1-5276-4176-8d33-c610e8ab8c94.png",
               "guarantee_icon": "loyalty",
               "title": "",
               "text": "<p>30 dagen volledig retourrecht<\/p>",
@@ -855,7 +858,7 @@
           "show_view_all": true,
           "button_label": "Bekijk alle",
           "button_link": "shopify:\/\/collections",
-          "button_style": "",
+          "button_style": "btn--primary",
           "slider_related_products": false,
           "arrows": false,
           "dots": false,
@@ -1071,8 +1074,8 @@
             "type": "row",
             "settings": {
               "card__icon": "shopify:\/\/shop_images\/Truck_100px.png",
-              "title": "Gratis verzending bij aankoop van meer dan €59",
-              "text": "<p>Levering in 1-3 werkdagen<\/p>",
+              "title": "Gratis verzending",
+              "text": "<p>Momenteel hanteren wij levertijden van 1-3 werkdagen (ma. - za.).<\/p>",
               "card__alignement": "center",
               "text_alignment": "text-center",
               "type_row": "",

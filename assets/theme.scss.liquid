@@ -1990,12 +1990,16 @@ $class-type: unquote(".");
   margin-bottom: $gutter-sm;
    p {
     font-size:0.85rem;
-    color: lighten($colorPrimary, 15%);
+    color: lighten($black, 45%);
   }
     // Tables
+    figure{
+      margin: 0;
+    }
     table {
       cursor: pointer;
       border: 1px solid darken($white,6%);
+      margin: $gutter-sm 0;
       thead{
         background-color: darken($white, 3%);
       }
@@ -6743,7 +6747,12 @@ background-color: $colorAccent;
 }
 
 /*================ _Product ================*/
-
+.product-single__media-group-wrapper {
+    @include screenUp($small){
+      position: sticky!important;
+      top:100px;
+    }
+}
 /*=== product media ===*/
 .product-single__media-group {
   &.slick-initialized {
