@@ -15,16 +15,20 @@
         data-autoplayspeed="{{ section.settings.announcement_autoplayspeed | times: 1000 }}">
         {%- for block in section.blocks -%}
         <a target="_blank" href="{{ block.settings.announcement_link }}" class="announcement-message-item announcement-{{ block.id }}  flex justify-center align-center" {{ block.shopify_attributes }}>
-          <span class="announcement-message"> 
+       
             {%- unless block.settings.announcement_text == blank -%}
-            {{ block.settings.announcement_text }}
+                <span class="announcement-message"> 
+                {{ block.settings.announcement_text }}
+              </span>
             {%- endunless -%}
-          </span>
-          <span class="announcement-image">
+
+     
             {%- unless block.settings.announcement_image == blank -%}
-              <img src="{{block.settings.announcement_image | img_url: '162x22' }}" alt="Trustpilot ratings">
+                <span class="announcement-image">
+                  <img src="{{block.settings.announcement_image | img_url: '162x22' }}" alt="Trustpilot ratings">
+                </span>
             {%- endunless -%}
-          </span>
+  
         </a>
         {%- endfor -%}
       </div>
