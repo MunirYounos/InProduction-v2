@@ -265,7 +265,9 @@
           "announcement-0": {
             "type": "message",
             "settings": {
-              "announcement_text": "<p>Gratis <strong>verzending<\/strong> | 30 dagen volledig retourrecht ✓<\/p>"
+              "announcement_text": "",
+              "announcement_link": "https:\/\/nl-be.trustpilot.com\/review\/anodyne.be?stars=5",
+              "announcement_image": "shopify:\/\/shop_images\/Trustpilot_4-5_banner_324px.png"
             }
           }
         },
@@ -294,8 +296,8 @@
           "default_logo_svg": "",
           "inverted_logo_svg": "",
           "mobile_logo_svg": "",
-          "logo_width": 130,
-          "logo_mobile_width": 110
+          "logo_width": 200,
+          "logo_mobile_width": 150
         }
       },
       "dbtfy-instagram-feed": {
@@ -386,7 +388,7 @@
               "column_width": 1,
               "title": "Categorieën",
               "subtitle": "",
-              "footer_link_list": "main-menu"
+              "footer_link_list": "footer-categories"
             }
           },
           "0bf661af-2d67-4ed7-9f1e-750e2c09c74e": {
@@ -436,7 +438,7 @@
           "show_payment_icons": true,
           "show_shopify_footer": false,
           "show_debutify_footer": false,
-          "custom_credential": "<p>P.O. Pedersens Vej 9, 8200 Aarhus N, Denemarken - BTW nummer: NL824334474B01<\/p>"
+          "custom_credential": "<p>P.O. Pedersens Vej 9, 8200 Aarhus N, Denemarken - BTW nummer: BE0669621781<\/p>"
         }
       },
       "product-template": {
@@ -659,7 +661,7 @@
           "text_description": "<p>Verbeter je houding en verminder rugpijn en spanningen<\/p>",
           "text_description_size": "medium",
           "button_label": "Lees meer",
-          "button_link": "shopify:\/\/collections\/demo-sale",
+          "button_link": "shopify:\/\/collections\/posture-shirt",
           "show_scrolldown": true
         }
       },
@@ -926,10 +928,10 @@
           "1630404145a76c9e4d-0": {
             "type": "video",
             "settings": {
-              "video_cover_image": "shopify:\/\/shop_images\/Video_NL.jpg",
-              "video_cover_image_fr": "shopify:\/\/shop_images\/posture-shirt-video-fr.jpg",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w",
-              "video_url_fr": "https:\/\/www.youtube.com\/watch?v=r3VOvBQz3TE",
+              "video_cover_image": "shopify:\/\/shop_images\/Thumbnail_Anodyne-min-min.jpg",
+              "video_cover_image_fr": "shopify:\/\/shop_images\/Thumbnail_Anodyne-min-min.jpg",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=aUOn534ScWc",
+              "video_url_fr": "https:\/\/www.youtube.com\/watch?v=ttlT7yb1u9I",
               "animated_button": true
             }
           }
@@ -955,7 +957,6 @@
               "accordion_title": "Houdingcorrigerende kleding",
               "accordion__inner-title": "Waarom de houdingcorrigerende kleding van Anodyne?",
               "accordion__description": "Met de houdingcorrigerende kleding van Anodyne® kun je eenvoudig en moeiteloos een betere houding krijgen, waardoor pijn en spanning in de nek en schouders worden verminderd. De houdingcorrigerende kleding van Anodyne® helpt je om je continu bewust te zijn van je houding. Of je nu stilzittend of actief werk doet, reist of sport. Anodyne® is een Europese producent en distributeur van houdingcorrigerende kleding met technologie ontwikkeld door de Amerikaanse AlignMed – de enige producent ter wereld van houdingcorrigerende kleding die geregistreerd staat bij de Amerikaanse FDA. De houdingcorrigerende kleding van Anodyne® is de enige in Europa die zowel FDA-goedgekeurd is als voorzien is van een CE-markering voor medische hulpmiddelen (Klasse I). De CE-markering is dus je garantie dat onze producten voldoen aan de eisen die aan medische hulpmiddelen worden gesteld.",
-              "accordion__image": "shopify:\/\/shop_images\/female2.jpg",
               "accordion__buttontext": "Shop",
               "accordion__LinkUrl": "shopify:\/\/collections\/posture-shirt"
             }
@@ -966,7 +967,6 @@
               "accordion_title": "NeuroBand™-technologie",
               "accordion__inner-title": "Gepatenteerde NeuroBand™-technologie in de houdingcorrigerende kleding van Anodyne",
               "accordion__description": "De houdingcorrigerende kleding van Anodyne® is gemaakt van een unieke mix van spandex, nylon en polyester, die zorgt voor een slijtvast en ademend product, dat zijn rekbaarheid behoudt en lekker zit. Het ontwerp maakt gebruik van de gepatenteerde NeuroBand™-technologie, die geïnspireerd is door kinesiotape en gebaseerd op wetenschappelijk onderzoek in de menselijke fysiologie. De kleding is ontworpen om de aanspannende en ontspannende eigenschappen van de spieren te weerspiegelen en daardoor een rechte houding te bevorderen.",
-              "accordion__image": "shopify:\/\/shop_images\/female1.jpg",
               "accordion__buttontext": "Shop",
               "accordion__LinkUrl": "shopify:\/\/collections\/posture-shirt"
             }
@@ -1448,6 +1448,21 @@
           "dbtfy_faq_banner_subtitle": "Onze klantenservice helpt je graag verder!",
           "dbtfy_faq_btn": "Neem contact op",
           "dbtfy_faq_link": "shopify:\/\/pages\/contact"
+        }
+      },
+      "map": {
+        "type": "map",
+        "settings": {
+          "show_on_desktop": false,
+          "show_on_mobile": false,
+          "hide_section": true,
+          "heading": "Our store",
+          "address": "<p>123 Fake St.<br\/>Toronto, Canada<\/p><p>Mon - Fri, 10am - 9pm<br\/>Saturday, 11am - 9pm<br\/>Sunday, 11am - 5pm<\/p>",
+          "map_address": "490 Rue De La Gauchetière O, Montréal",
+          "button_text": "Get directions",
+          "map_icon": "location_on",
+          "api_key": "",
+          "image_position": "center center"
         }
       }
     },

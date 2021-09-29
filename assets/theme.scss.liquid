@@ -4877,6 +4877,9 @@ cite {
   .grid-small > & {
     padding-left: $gutter-sm;
     padding-right: $gutter-sm;
+    @include screen($small) {
+      padding-right: 0;
+    }
   }
 
   // Xsmall
@@ -5594,7 +5597,7 @@ cite {
     }
 
     & > .grid__item {
-      padding-left: $gutter-xs;
+      padding-left: ($gutter-xs - 4);
     }
   }
 }
